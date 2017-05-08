@@ -1,3 +1,28 @@
+# Entrada
+
+## Dependencies
+
+This project attempts to keep all dependencies as up-to-date as possible. Noted exceptions:
+
+* `@types/jasmine`: versions beyond conflict with other updated dependencies—periodically try to update
+* `tslint`
+	* tslint: codelyzer values not working in tslint 5:
+		* "directive-selector": [true, "attribute", [], "camelCase"],
+		* "component-selector": [true, "element", [], "kebab-case"],
+		* "pipe-naming": [true, "camelCase"],
+
+## Universal
+
+While this starter framework provides Angular Universal support, Entrada will not fully support it yet:
+
+* We will attempt to enable Universal server-side rendering for the homepage/signup pages to help Search Engines
+* The Entrada application is not a terribly large or complex application, so we will attempt to optimize and reduce the size of the single payload (for now)
+* The Universal branch was only recently merged into Angular 4 and documentation/examples are light
+
+---
+
+# Based on:
+
 # Complete starter seed project for Angular 2
 
 ## Material Branch with Universal (Server-side rendering) support

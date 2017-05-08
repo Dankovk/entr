@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TransferState } from '../modules/transfer-state/transfer-state';
 
-import { views } from './app-nav-views';
 import { MOBILE } from './services/constants';
 
 @Component({
-  selector: 'my-app',
+  selector: 'entrada-ui',
   styleUrls: ['./app.component.css'],
   templateUrl: './app.component.html'
 })
@@ -16,7 +15,6 @@ export class AppComponent implements OnInit {
   );
   mobile = MOBILE;
   sideNavMode = MOBILE ? 'over' : 'side';
-  views = views;
 
   constructor(
     private cache: TransferState,

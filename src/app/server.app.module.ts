@@ -33,7 +33,7 @@ export function onBootstrap(appRef: ApplicationRef, transferState: TransferState
   ],
   imports: [
     BrowserModule.withServerTransition({
-      appId: 'my-app-id'
+      appId: 'entrada-ui'
     }),
     NoopAnimationsModule,
     ServerModule,

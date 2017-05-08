@@ -22,7 +22,6 @@ app.engine('html', ngExpressEngine({
 }));
 
 app.set('view engine', 'html');
-app.set('views', 'src');
 
 app.use(compression());
 app.use('/', express.static('dist', { index: false }));
