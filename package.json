@@ -16,6 +16,8 @@
     "ngc": "./node_modules/.bin/ngc -p tsconfig.aot.json",
     "nodemon": "nodemon",
     "stylelint": "stylelint",
+    "commit": "git-cz",
+    "commitizen": "commitizen",
     "webdriver-manager": "webdriver-manager",
     "webdriver:update": "npm run webdriver-manager update",
     "webdriver:start": "npm run webdriver-manager start",
@@ -148,9 +150,11 @@
     "angular2-template-loader": "~0.6.2",
     "awesome-typescript-loader": "~3.1.2",
     "codelyzer": "~2.1.1",
+    "commitizen": "^2.9.6",
     "compression-webpack-plugin": "~0.4.0",
     "copy-webpack-plugin": "~4.0.1",
     "css-loader": "~0.28.0",
+    "cz-changelog": "^1.0.1",
     "es6-promise": "~4.1.0",
     "es6-promise-loader": "~1.0.2",
     "express": "~4.15.2",
@@ -204,6 +208,11 @@
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://bitbucket.org/entradapiano/entrada-ui/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-changelog"
+    }
   },
   "homepage": "https://entrada.faberpiano.com"
 }
