@@ -1,16 +1,28 @@
 /* tslint:disable: max-line-length */
 import { Routes } from '@angular/router';
 
-import { DashboardComponent } from './features/dashboard/dashboard.component';
-import { SigninComponent } from './features/signin/signin.component';
 import { NotFound404Component } from './not-found404.component';
+import { AuthGuard } from './services/auth-guard.service';
+
+// Protected routes
+import { ProtectedModule } from './features/protected/protected.module';
+
+// Public routes
+import { SigninModule } from './features/public/signin/signin.module';
+import { RecoverPasswordModule } from './features/public/recoverpassword/recoverpassword.module';
 
 export const routes: Routes = [
-	{ path: '', component: DashboardComponent, pathMatch: 'full' },
-	{ path: 'signin', component: SigninComponent, pathMatch: 'full' },
+	{ path: '',
+		pathMatch: 'full',
+		canActivate: [AuthGuard],
+		loadChildren: () => ProtectedModule
+	},
+	{ path: 'signin',
+		loadChildren: () => SigninModule
+	},
 	{
 		path: 'changepassword',
-		loadChildren: './features/recoverpassword/recoverpassword.module#RecoverPasswordModule'
+		loadChildren: () => RecoverPasswordModule
 	},
 	{ path: '**', component: NotFound404Component }
 ];

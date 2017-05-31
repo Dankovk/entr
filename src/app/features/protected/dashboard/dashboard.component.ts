@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
-import { TransferHttp } from '../../../modules/transfer-http/transfer-http';
+import { TransferHttp } from '../../../../modules/transfer-http/transfer-http';
 
 @Component({
 	selector: 'entrada-dashboard',

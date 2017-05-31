@@ -6,18 +6,16 @@ import { ChangePasswordComponent } from './changepassword.component';
 import { NewPasswordComponent } from './newpassword.component';
 
 const recoverPasswordRoutes: Routes = [{
-	path: 'changepassword',
+	path: '',
 	component: RecoverPasswordComponent,
-	children: [{
-		path: '',
-		component: ChangePasswordComponent,
-		pathMatch: 'full'
-	},
-	{
-		path: 'new',
-		component: NewPasswordComponent,
-		pathMatch: 'full'
-	}]
+	children: [
+		{ path: '',
+			component: ChangePasswordComponent
+		},
+		{ path: 'new', pathMatch: 'full',
+			component: NewPasswordComponent
+		}
+	]
 }];
 
 @NgModule({

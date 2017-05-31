@@ -3,6 +3,7 @@ export declare const DEV_PORT: number;
 export declare const E2E_PORT: number;
 export declare const PROD_PORT: number;
 export declare const UNIVERSAL_PORT: number;
+export declare const GRAPH_API_BASE_URL: string;
 
 export declare const SHOW_WEBPACK_BUNDLE_ANALYZER: boolean;
 

@@ -3,10 +3,12 @@ const root = require('./helpers.js').root
 const ip = require('ip');
 
 exports.HOST = ip.address();
-exports.DEV_PORT = 3000;
+exports.DEV_PORT = 3004;
 exports.E2E_PORT = 4201;
 exports.PROD_PORT = 8088;
 exports.UNIVERSAL_PORT = 8000;
+
+exports.GRAPH_API_BASE_URL = 'https://api.graph.cool/simple/v1/cj2xr9uma7xa20133jfpk4dsq';
 
 exports.SHOW_WEBPACK_BUNDLE_ANALYZER = false;
 
@@ -49,7 +51,10 @@ exports.STORE_DEV_TOOLS = 'monitor'
 exports.EXCLUDE_SOURCE_MAPS = [
   // these packages have problems with their sourcemaps
   root('node_modules/@angular'),
-  root('node_modules/rxjs')
+  root('node_modules/rxjs'),
+  root('node_modules/@angular-redux'),
+  root('node_modules/apollo-client'),
+  root('node_modules/apollo-angular')
 ]
 
 exports.MY_COPY_FOLDERS = [

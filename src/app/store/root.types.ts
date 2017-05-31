@@ -1,4 +1,7 @@
 
 export interface IAppState {
-	routes?: any;
+	router?: any;
+	auth?: any;
+	apollo?: any;
+	ui?: any;
 }

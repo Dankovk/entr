@@ -4,8 +4,11 @@ import { routerReducer } from '@angular-redux/router';
 
 // Define the global store shape by combining our application's
 // reducers together into a given structure.
-export const rootReducer = composeReducers(
-	defaultFormReducer(),
-	combineReducers({
-		router: routerReducer
-}));
+export const rootReducer = (reducers: Object = {}) =>
+	composeReducers(
+		defaultFormReducer(),
+		combineReducers(Object.assign({
+			router: routerReducer
+		},
+		reducers
+	)));
