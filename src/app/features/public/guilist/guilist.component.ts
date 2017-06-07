@@ -7,7 +7,8 @@ import 'rxjs/add/operator/map';
 
 @Component({
     selector: 'entrada-guilist',
-    templateUrl: './guilist.component.html'
+    templateUrl: './guilist.component.html',
+    styleUrls: ['guilist.component.css']
 })
 
 export class GuilistComponent {}
