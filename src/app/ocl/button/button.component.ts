@@ -1,5 +1,4 @@
-import { Component, ChangeDetectionStrategy, ViewEncapsulation, OnInit } from '@angular/core';
-
+import {Component, ChangeDetectionStrategy, ViewEncapsulation, ElementRef, OnDestroy} from "@angular/core";
 
 @Component({
     selector: 'ocl-button',
@@ -9,4 +8,26 @@ import { Component, ChangeDetectionStrategy, ViewEncapsulation, OnInit } from '@
     encapsulation: ViewEncapsulation.None
 })
 
-export class OclButton { }
+export class OclButton implements OnDestroy {
+    constructor(private _elementRef: ElementRef) {};
+
+    ngOnDestroy() {
+
+    }
+
+    _getHostElement() {
+        return this._elementRef.nativeElement.getElementsByTagName("button")[0];
+    }
+
+    focus(): void {
+        this._getHostElement().focus();
+    }
+
+    disable(): void {
+        this._getHostElement().disabled = true;
+    }
+
+    enable(): void {
+        this._getHostElement().disabled = false;
+    }
+}

@@ -3,7 +3,7 @@ import { Component, ChangeDetectionStrategy, ViewEncapsulation, OnInit} from '@a
 @Component({
 	selector: 'ocl-textfield',
 	templateUrl: './textfield.component.html',
-	styleUrls: ['./textfield.component.scss'],
+	styleUrls: ['./textfield.component.css'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	encapsulation: ViewEncapsulation.None
 
