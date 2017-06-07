@@ -57,7 +57,7 @@
     "compile:watch": "watch-run -i npm run compile:only -p 'src/app/**/*.ts, src/app/**/*.scss' npm run compile:only",
     "prodserver": "node prodserver",
     "sass": "node-sass src -o src --include-path node_modules/@one --include-path node_modules --output-style compressed -q",
-    "sass:watch": "node-sass -w src -o src --include-path node_modules --output-style compressed -q",
+    "sass:watch": "node-sass -w src -o src --include-path node_modules --include-path node_modules/@one --output-style compressed -q",
     "start": "npm run server:dev",
     "start:hmr": "npm run server:hmr",
     "serve80": "sudo PORT=80 node prodserver",
@@ -123,13 +123,14 @@
     "hammerjs": "~2.0.8",
     "ip": "~1.1.5",
     "methods": "1.1.2",
+    "one": "git+ssh://git@bitbucket.org:entradapiano/one.git#integration-to-entrada",
     "redux": "^3.6.0",
     "redux-logger": "^3.0.1",
     "redux-observable": "^0.14.1",
     "rxjs": "^5.3.0",
+    "sass-loader": "^6.0.5",
     "script-ext-html-webpack-plugin": "^1.7.1",
-    "zone.js": "~0.8.9",
-    "one": "git+ssh://git@bitbucket.org:entradapiano/one.git#integration-to-entrada"
+    "zone.js": "~0.8.9"
   },
   "devDependencies": {
     "@entrada-config/eslint-config-entrada": "git+ssh://git@bitbucket.org:entradapiano/entrada-config-eslint-config-entrada.git#develop",

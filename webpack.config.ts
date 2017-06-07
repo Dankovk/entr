@@ -1,17 +1,25 @@
-/* tslint:disable: variable-name max-line-length */
-/**
- * Try to not make your own edits to this file, use the constants folder instead.
- * If more constants should be added file an issue or create PR.
- */
-import 'ts-helpers';
-
+import "ts-helpers";
 import {
-	DEV_PORT, PROD_PORT, UNIVERSAL_PORT, EXCLUDE_SOURCE_MAPS, HOST, GRAPH_API_BASE_URL,
-	USE_DEV_SERVER_PROXY, DEV_SERVER_PROXY_CONFIG, DEV_SERVER_WATCH_OPTIONS,
-	DEV_SOURCE_MAPS, PROD_SOURCE_MAPS, STORE_DEV_TOOLS,
-	MY_COPY_FOLDERS, MY_POLYFILL_DLLS, MY_VENDOR_DLLS, MY_CLIENT_PLUGINS, MY_CLIENT_PRODUCTION_PLUGINS,
-	MY_CLIENT_RULES, SHOW_WEBPACK_BUNDLE_ANALYZER
-} from './constants';
+	DEV_PORT,
+	PROD_PORT,
+	UNIVERSAL_PORT,
+	EXCLUDE_SOURCE_MAPS,
+	HOST,
+	GRAPH_API_BASE_URL,
+	USE_DEV_SERVER_PROXY,
+	DEV_SERVER_PROXY_CONFIG,
+	DEV_SERVER_WATCH_OPTIONS,
+	DEV_SOURCE_MAPS,
+	PROD_SOURCE_MAPS,
+	STORE_DEV_TOOLS,
+	MY_COPY_FOLDERS,
+	MY_POLYFILL_DLLS,
+	MY_VENDOR_DLLS,
+	MY_CLIENT_PLUGINS,
+	MY_CLIENT_PRODUCTION_PLUGINS,
+	MY_CLIENT_RULES,
+	SHOW_WEBPACK_BUNDLE_ANALYZER
+} from "./constants";
 
 const {
 	ContextReplacementPlugin,
@@ -25,14 +33,14 @@ const {
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CompressionPlugin = require('compression-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { CheckerPlugin } = require('awesome-typescript-loader');
+const {CheckerPlugin} = require('awesome-typescript-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
 const ScriptExtPlugin = require('script-ext-html-webpack-plugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const webpackMerge = require('webpack-merge');
 
-const { hasProcessFlag, includeClientPackages, root, testDll } = require('./helpers.js');
+const {hasProcessFlag, includeClientPackages, root, testDll} = require('./helpers.js');
 
 const EVENT = process.env.npm_lifecycle_event || '';
 const AOT = EVENT.includes('aot');
@@ -90,18 +98,18 @@ const DLL_VENDORS = [
 ];
 
 const COPY_FOLDERS = [
-	{ from: 'src/assets', to: 'assets' },
-	{ from: 'node_modules/hammerjs/hammer.min.js' },
-	{ from: 'node_modules/hammerjs/hammer.min.js.map' },
-	{ from: 'src/app/main.css' },
-	{ from: 'src/app/styles.css' },
+	{from: 'src/assets', to: 'assets'},
+	{from: 'node_modules/hammerjs/hammer.min.js'},
+	{from: 'node_modules/hammerjs/hammer.min.js.map'},
+	{from: 'src/app/main.css'},
+	{from: 'src/app/styles.css'},
 	...MY_COPY_FOLDERS
 ];
 
 if (!DEV_SERVER) {
-	COPY_FOLDERS.unshift({ from: 'src/index.html' });
+	COPY_FOLDERS.unshift({from: 'src/index.html'});
 } else {
-	COPY_FOLDERS.push({ from: 'dll' });
+	COPY_FOLDERS.push({from: 'dll'});
 }
 
 const commonConfig = function webpackConfig(): WebpackConfig {
@@ -124,9 +132,24 @@ const commonConfig = function webpackConfig(): WebpackConfig {
 				],
 				exclude: [/\.(spec|e2e|d)\.ts$/]
 			},
-			{ test: /\.json$/, loader: 'json-loader' },
-			{ test: /\.html/, loader: 'raw-loader', exclude: [root('src/index.html')] },
-			{ test: /\.css$/, loader: 'raw-loader' },
+			{test: /\.json$/, loader: 'json-loader'},
+			{test: /\.html/, loader: 'raw-loader', exclude: [root('src/index.html')]},
+			{test: /\.css$/, loader: 'raw-loader'},
+			{
+				test: /\.scss$/,
+				exclude: /node_modules/,
+				use: [
+					{
+						loader: "raw-loader"
+					},
+					{
+						loader: "sass-loader",
+						options: {
+							includePaths: ["node_modules/@one", "node_modules"]
+						}
+					},
+				],
+			},
 			...MY_CLIENT_RULES
 		]
 	};
@@ -169,8 +192,8 @@ const commonConfig = function webpackConfig(): WebpackConfig {
 		);
 	} else {
 		config.plugins.push(
-			new CopyWebpackPlugin(COPY_FOLDERS, { ignore: ['*dist_root/*'] }),
-			new CopyWebpackPlugin([{ from: 'src/assets/dist_root' }])
+			new CopyWebpackPlugin(COPY_FOLDERS, {ignore: ['*dist_root/*']}),
+			new CopyWebpackPlugin([{from: 'src/assets/dist_root'}])
 		);
 	}
 
@@ -188,13 +211,13 @@ const commonConfig = function webpackConfig(): WebpackConfig {
 		);
 		if (!E2E && !WATCH && !UNIVERSAL && SHOW_WEBPACK_BUNDLE_ANALYZER) {
 			config.plugins.push(
-				new BundleAnalyzerPlugin({ analyzerPort: 5000 })
+				new BundleAnalyzerPlugin({analyzerPort: 5000})
 			);
 		}
 	}
 
 	return config;
-} ();
+}();
 
 // type definition for WebpackConfig at the bottom
 const clientConfig = function webpackConfig(): WebpackConfig {
@@ -305,7 +328,7 @@ const clientConfig = function webpackConfig(): WebpackConfig {
 
 	return config;
 
-} ();
+}();
 
 const serverConfig: WebpackConfig = {
 	target: 'node',

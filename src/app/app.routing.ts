@@ -10,6 +10,8 @@ import { ProtectedModule } from './features/protected/protected.module';
 // Public routes
 import { SigninModule } from './features/public/signin/signin.module';
 import { RecoverPasswordModule } from './features/public/recoverpassword/recoverpassword.module';
+import { GuilistModule } from './features/public/guilist/guilist.module';
+
 
 export const routes: Routes = [
 	{ path: '',
@@ -23,6 +25,10 @@ export const routes: Routes = [
 	{
 		path: 'changepassword',
 		loadChildren: () => RecoverPasswordModule
+	},
+	{
+		path: 'guilist',
+		loadChildren: () => GuilistModule
 	},
 	{ path: '**', component: NotFound404Component }
 ];
