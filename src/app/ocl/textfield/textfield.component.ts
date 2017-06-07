@@ -1,23 +1,53 @@
-import { Component, ChangeDetectionStrategy, ViewEncapsulation, ElementRef, Input, Self, Optional, OnInit} from '@angular/core';
+import { Component,
+	ChangeDetectionStrategy,
+	ViewEncapsulation,
+	ElementRef,
+	Input,
+	OnDestroy,
+	Optional,
+	Directive,
+	Self,
+	AfterContentInit,
+	AfterContentChecked,
+	AfterViewInit,
+	ChangeDetectorRef,
+	ContentChild,
+	ContentChildren,
+	EventEmitter,
+	Output,
+	QueryList,
+	Renderer2,
+	ViewChild} from '@angular/core';
 import {FormGroupDirective, NgControl, NgForm} from '@angular/forms';
 
-@Component({
-	selector: 'ocl-textfield',
-	templateUrl: './textfield.component.html',
-	styleUrls: ['./textfield.component.css'],
+
+
+
+@Directive({
+	selector: 'textfield[ocl-textfield]',
 	host: {
 		'[id]': 'id',
+		'class': 'ocl-textfield',
 		'[placeholder]': 'placeholder',
 		'[disabled]': 'disabled',
 		'[required]': 'required'
-	},
+	}
+})
+
+export class OclTextfieldDirective {}
+
+@Component({
+	selector: 'textfield[ocl-textfield]',
+	templateUrl: './textfield.component.html',
+	styleUrls: ['./textfield.component.css'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	encapsulation: ViewEncapsulation.None
 
 })
 
-export class OclTextfield {
+export class OclTextfield implements OnDestroy {
 
+	private loading: boolean;
 	private _disabled = false;
 	private _required = true;
 	private _focused = false;
@@ -42,10 +72,12 @@ export class OclTextfield {
 	@Optional() @Self() public _ngControl: NgControl,
 	@Optional() private _parentForm: NgForm) {
 
+		this.loading = false;
+
 	}
 
 	_getHostElement() {
-		return this._elementRef.nativeElement.getElementsByTagName("input")[0];
+		return this._elementRef.nativeElement;
 	}
 
 	focus(): void {
@@ -60,6 +92,10 @@ export class OclTextfield {
 
 	required(): void {
 		this._getHostElement().required = !this._required;
+	}
+
+	load(): void {
+		this.loading = true;
 	}
 
 }

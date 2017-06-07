@@ -21,7 +21,7 @@ export class OclButton implements OnDestroy {
     private loading: boolean;
     constructor(
         private _elementRef: ElementRef,
-        private _renderer: Renderer2,
+        private _renderer: Renderer2
     ) {
         this.loading = false;
     };
