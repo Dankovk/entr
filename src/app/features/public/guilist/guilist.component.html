@@ -1,6 +1,7 @@
 <div class="gui-list">
     <div class="gui-list__block">
         <div class="gui-list__element">
+            <h3>Button</h3>
             <button ocl-button #button>
                 <span>Button</span>
             </button>
@@ -9,6 +10,19 @@
             <button (click)="button.disable()">disable</button>
             <button (click)="button.enable()">enable</button>
             <button (click)="button.focus()">focus</button>
+        </div>
+    </div>
+    <div class="gui-list__block">
+        <div class="gui-list__element">
+            <h3>Large button</h3>
+            <button ocl-button-large #buttonLarge>
+                <span>Button</span>
+            </button>
+        </div>
+        <div class="gui-list__controls">
+            <button (click)="buttonLarge.disable()">disable</button>
+            <button (click)="buttonLarge.enable()">enable</button>
+            <button (click)="buttonLarge.focus()">focus</button>
         </div>
     </div>
     <div class="gui-list__block">

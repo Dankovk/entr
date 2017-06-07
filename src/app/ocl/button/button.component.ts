@@ -8,8 +8,15 @@ import {Component, ChangeDetectionStrategy, ViewEncapsulation, ElementRef, OnDes
 
 export class OclButtonDirective {};
 
+@Directive({
+    selector: 'button[ocl-button-large]',
+    host: {'class': 'ocl-button ocl-button--large'}
+})
+
+export class OclButtonLargeDirective {};
+
 @Component({
-    selector: 'button[ocl-button]',
+    selector: 'button[ocl-button], button[ocl-button-large]',
     templateUrl: './button.component.html',
     styleUrls: ['./button.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush,
