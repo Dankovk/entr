@@ -10,4 +10,4 @@ import 'rxjs/add/operator/map';
     templateUrl: './guilist.component.html'
 })
 
-export class GuilistComponent  {}
+export class GuilistComponent {}

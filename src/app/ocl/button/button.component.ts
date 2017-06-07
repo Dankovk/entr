@@ -4,7 +4,7 @@ import { Component, ChangeDetectionStrategy, ViewEncapsulation, OnInit } from '@
 @Component({
     selector: 'ocl-button',
     templateUrl: './button.component.html',
-    styleUrls: ['./button.component.scss'],
+    styleUrls: ['./button.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None
 })
