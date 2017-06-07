@@ -10,7 +10,7 @@ export class OclButtonDirective {};
 
 @Directive({
     selector: 'button[ocl-button-large]',
-    host: {'class': 'ocl-button ocl-button--large'}
+    host: {'class': 'ocl-button ocl-button--large ocl-button--round-left'}
 })
 
 export class OclButtonLargeDirective {};
@@ -28,7 +28,7 @@ export class OclButton implements OnDestroy {
     private loading: boolean;
     constructor(
         private _elementRef: ElementRef,
-        private _renderer: Renderer2,
+        private _renderer: Renderer2
     ) {
         this.loading = false;
     };
@@ -57,8 +57,16 @@ export class OclButton implements OnDestroy {
         return this._getHostElement().disabled;
     }
 
-    load(): void {
+    showSpinner(): void {
         this.loading = true;
+        this._renderer.addClass(this._getHostElement(), `ocl-button--loading`);
+        this._renderer.addClass(this._getHostElement(), `ocl-button--add-loader`);
+    }
+
+    hideSpinner(): void {
+        this.loading = false;
+        this._renderer.removeClass(this._getHostElement(), `ocl-button--loading`);
+        this._renderer.removeClass(this._getHostElement(), `ocl-button--add-loader`);
     }
 
 }

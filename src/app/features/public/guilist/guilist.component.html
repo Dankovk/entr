@@ -3,20 +3,24 @@
         <div class="gui-list__element">
             <h3>Button</h3>
             <button ocl-button #button>
-                <span>Button</span>
+                <span class="ocl-button__label">Button</span>
             </button>
         </div>
         <div class="gui-list__controls">
             <button (click)="button.disable()">disable</button>
             <button (click)="button.enable()">enable</button>
             <button (click)="button.focus()">focus</button>
+            <button (click)="button.showSpinner()">loading</button>
+            <button (click)="button.hideSpinner()">not loading</button>
         </div>
     </div>
     <div class="gui-list__block">
         <div class="gui-list__element">
             <h3>Large button</h3>
             <button ocl-button-large #buttonLarge>
-                <span>Button</span>
+                <img src="http://placehold.it/50x50" class="ocl-button__image--round" alt="">
+                <span class="ocl-button__label">Skill Library</span>
+                <div class="ocl-button--hex-right"></div>
             </button>
         </div>
         <div class="gui-list__controls">
