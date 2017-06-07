@@ -8,8 +8,15 @@ import {Component, ChangeDetectionStrategy, ViewEncapsulation, ElementRef, OnDes
 
 export class OclButtonDirective {};
 
+@Directive({
+    selector: 'button[ocl-button-large]',
+    host: {'class': 'ocl-button ocl-button--large ocl-button--round-left'}
+})
+
+export class OclButtonLargeDirective {};
+
 @Component({
-    selector: 'button[ocl-button]',
+    selector: 'button[ocl-button], button[ocl-button-large]',
     templateUrl: './button.component.html',
     styleUrls: ['./button.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -50,8 +57,16 @@ export class OclButton implements OnDestroy {
         return this._getHostElement().disabled;
     }
 
-    load(): void {
+    showSpinner(): void {
         this.loading = true;
+        this._renderer.addClass(this._getHostElement(), `ocl-button--loading`);
+        this._renderer.addClass(this._getHostElement(), `ocl-button--add-loader`);
+    }
+
+    hideSpinner(): void {
+        this.loading = false;
+        this._renderer.removeClass(this._getHostElement(), `ocl-button--loading`);
+        this._renderer.removeClass(this._getHostElement(), `ocl-button--add-loader`);
     }
 
 }

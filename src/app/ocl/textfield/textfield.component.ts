@@ -24,20 +24,42 @@ import {FormGroupDirective, NgControl, NgForm} from '@angular/forms';
 
 
 @Directive({
-	selector: 'textfield[ocl-textfield]',
+	selector: 'lable[ocl-input-label]',
 	host: {
-		'[id]': 'id',
-		'class': 'ocl-textfield',
-		'[placeholder]': 'placeholder',
-		'[disabled]': 'disabled',
-		'[required]': 'required'
+		'class': 'ocl-input-label'
 	}
 })
 
-export class OclTextfieldDirective {}
+export class OclLabelDirective {}
+
+
+@Directive({
+	selector: 'span[ocl-input-error]',
+	host: {
+		'class': 'ocl-input-error'
+	}
+})
+
+export class OclErrorDirective {}
+
+
+@Directive({
+	selector: 'input[ocl-input]',
+	host: {
+		'class': 'ocl-input',
+		// '[placeholder]': 'placeholder',
+		// '[type]': 'text',
+		// '[disabled]': 'disabled',
+		// '[required]': 'required'
+	}
+})
+
+export class OclInputDirective {}
+
+
 
 @Component({
-	selector: 'textfield[ocl-textfield]',
+	selector: 'ocl-textfield',
 	templateUrl: './textfield.component.html',
 	styleUrls: ['./textfield.component.css'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
@@ -54,25 +76,20 @@ export class OclTextfield implements OnDestroy {
 	private _id: string;
 	private _cachedUid: string;
 
-	@Input()
-	get disabled() {
-		return this._ngControl ? this._ngControl.disabled : this._disabled;
-	}
-	set disabled(value: any) {
-		this._disabled = value ? true : false;
-		console.log(value);
-	}
-	//
-	// /** Whether the element is required. */
-	// @Input()
-	// get required() { return this._required; }
-	// set required(value: any) { this._required = value; }
+
+	@ContentChild(OclLabelDirective) _oclLabelChild: OclLabelDirective;
+	@ContentChild(OclInputDirective) _oclInputChild: OclInputDirective;
+	@ContentChild(OclErrorDirective) _oclErrorChild: OclErrorDirective;
 
 	constructor(private _elementRef: ElementRef,
-	@Optional() @Self() public _ngControl: NgControl,
-	@Optional() private _parentForm: NgForm) {
+	            private _renderer: Renderer2,
+	            private _changeDetectorRef: ChangeDetectorRef) {
 
 		this.loading = false;
+
+	}
+
+	ngOnDestroy() {
 
 	}
 
@@ -88,10 +105,6 @@ export class OclTextfield implements OnDestroy {
 	blur(): void {
 		this._getHostElement().blur();
 		this._focused = false;
-	}
-
-	required(): void {
-		this._getHostElement().required = !this._required;
 	}
 
 	load(): void {

@@ -1,10 +1,6 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-
-import {
-    OclButton,
-    OclButtonDirective,
-} from './button.component';
+import {NgModule} from "@angular/core";
+import {CommonModule} from "@angular/common";
+import {OclButton, OclButtonDirective, OclButtonLargeDirective} from "./button.component";
 
 export * from './button.component';
 
@@ -14,11 +10,15 @@ export * from './button.component';
     ],
     exports: [
         OclButton,
-        OclButtonDirective
+        OclButtonDirective,
+        OclButtonLargeDirective
     ],
     declarations: [
-       OclButton,
-       OclButtonDirective
+        OclButton,
+        OclButtonDirective,
+        OclButtonLargeDirective
+
     ],
 })
-export class OclButtonModule {}
+export class OclButtonModule {
+}

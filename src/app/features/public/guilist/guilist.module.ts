@@ -4,16 +4,14 @@ import { CommonModule } from '@angular/common';
 import { GuilistRoutingModule } from './guilist-routing.module';
 
 import { GuilistComponent } from './guilist.component';
-import { OclButtonModule } from '../../../ocl/button/index';
-import { OclTextfieldModule } from '../../../ocl/textfield/index';
+import { OclModule } from '../../../ocl/ocl.module';
 
 @NgModule({
     declarations: [GuilistComponent],
     imports: [
         CommonModule,
         GuilistRoutingModule,
-        OclButtonModule,
-        OclTextfieldModule
+        OclModule
     ],
 })
 
