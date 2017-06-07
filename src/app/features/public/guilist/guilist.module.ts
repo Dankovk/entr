@@ -5,9 +5,10 @@ import { GuilistRoutingModule } from './guilist-routing.module';
 
 import { GuilistComponent } from './guilist.component';
 import { OclButton } from '../../../ocl/button/button.component';
+import { OclTextfield } from '../../../ocl/textfield/textfield.component';
 
 @NgModule({
-    declarations: [GuilistComponent, OclButton],
+    declarations: [GuilistComponent, OclButton, OclTextfield],
     imports: [
         CommonModule,
         GuilistRoutingModule
