@@ -49,7 +49,7 @@ export class OclErrorDirective {}
 		'class': 'ocl-input',
 		// '[placeholder]': 'placeholder',
 		// '[type]': 'text',
-		// '[disabled]': 'disabled',
+		'[disabled]': 'disabled',
 		// '[required]': 'required'
 	}
 })
@@ -94,7 +94,7 @@ export class OclTextfield implements OnDestroy {
 	}
 
 	_getHostElement() {
-		return this._elementRef.nativeElement;
+		return this._elementRef.nativeElement.getElementsByTagName('input')[0];
 	}
 
 	focus(): void {
@@ -105,6 +105,16 @@ export class OclTextfield implements OnDestroy {
 	blur(): void {
 		this._getHostElement().blur();
 		this._focused = false;
+	}
+
+	disable(): void {
+		this._getHostElement().disabled = true;
+		this._disabled = true;
+	}
+
+	enable(): void {
+		this._getHostElement().disabled = false;
+		this._disabled = false;
 	}
 
 	load(): void {
