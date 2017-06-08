@@ -30,8 +30,15 @@
         </div>
     </div>
     <div class="gui-list__block">
-        <ocl-textfield></ocl-textfield>
-        <div class="gui-list__controls"></div>
+        <ocl-textfield>
+            <label ocl-input-label>Default Label</label>
+            <input ocl-input #input type="text" placeholder="Default input"/>
+            <span ocl-input-error>Default Error</span>
+        </ocl-textfield>
+        <div class="gui-list__controls">
+            <button (click)="input.focus()">focus</button>
+            <button (click)="input.blur()">blur</button>
+        </div>
     </div>
 
 </div>
