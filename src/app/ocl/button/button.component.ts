@@ -57,6 +57,10 @@ export class OclButton implements OnDestroy {
         return this._getHostElement().disabled;
     }
 
+    isLoading(): boolean {
+        return this.loading;
+    }
+
     showSpinner(): void {
         this.loading = true;
         this._renderer.addClass(this._getHostElement(), `ocl-button--loading`);
