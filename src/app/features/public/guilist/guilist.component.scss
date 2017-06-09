@@ -1,0 +1,18 @@
+.gui-list {
+	width: 1080px;
+	margin: 50px auto;
+
+	&__block {
+		padding: 20px;
+		background-color: #f1f1f1;
+		margin-bottom: 20px;
+	}
+
+	&__element {
+		margin-bottom: 20px;
+	}
+
+	h3 {
+		margin-top: 0;
+	}
+}
