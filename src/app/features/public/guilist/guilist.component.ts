@@ -1,9 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
-import { Subject } from 'rxjs/Subject';
-import { Observable } from 'rxjs/Observable';
-import { ActivatedRoute } from '@angular/router';
-import 'rxjs/add/operator/map';
+import {Component} from "@angular/core";
+import "rxjs/add/operator/map";
 
 @Component({
     selector: 'entrada-guilist',
@@ -11,4 +7,5 @@ import 'rxjs/add/operator/map';
     styleUrls: ['guilist.component.css']
 })
 
-export class GuilistComponent {}
+export class GuilistComponent {
+}

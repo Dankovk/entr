@@ -1,10 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import { GuilistRoutingModule } from './guilist-routing.module';
-
-import { GuilistComponent } from './guilist.component';
-import { OclModule } from '../../../ocl/ocl.module';
+import {NgModule} from "@angular/core";
+import {CommonModule} from "@angular/common";
+import {GuilistRoutingModule} from "./guilist-routing.module";
+import {GuilistComponent} from "./guilist.component";
+import {OclModule} from "../../../ocl/ocl.module";
 
 @NgModule({
     declarations: [GuilistComponent],
@@ -15,4 +13,6 @@ import { OclModule } from '../../../ocl/ocl.module';
     ],
 })
 
-export class GuilistModule {};
+export class GuilistModule {
+}
+;

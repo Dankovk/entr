@@ -1,7 +1,6 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
-import { GuilistComponent } from './guilist.component';
+import {NgModule} from "@angular/core";
+import {RouterModule, Routes} from "@angular/router";
+import {GuilistComponent} from "./guilist.component";
 
 const guilistRoutes: Routes = [{
     path: '',
@@ -16,4 +15,5 @@ const guilistRoutes: Routes = [{
         RouterModule
     ]
 })
-export class GuilistRoutingModule { }
+export class GuilistRoutingModule {
+}

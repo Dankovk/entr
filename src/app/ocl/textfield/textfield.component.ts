@@ -1,26 +1,14 @@
-import { Component,
+import {
+	Component,
 	ChangeDetectionStrategy,
 	ViewEncapsulation,
 	ElementRef,
-	Input,
 	OnDestroy,
-	Optional,
 	Directive,
-	Self,
-	AfterContentInit,
-	AfterContentChecked,
-	AfterViewInit,
 	ChangeDetectorRef,
 	ContentChild,
-	ContentChildren,
-	EventEmitter,
-	Output,
-	QueryList,
-	Renderer2,
-	ViewChild} from '@angular/core';
-import {FormGroupDirective, NgControl, NgForm} from '@angular/forms';
-
-
+	Renderer2
+} from "@angular/core";
 
 
 @Directive({
@@ -30,7 +18,8 @@ import {FormGroupDirective, NgControl, NgForm} from '@angular/forms';
 	}
 })
 
-export class OclLabelDirective {}
+export class OclLabelDirective {
+}
 
 
 @Directive({
@@ -40,7 +29,8 @@ export class OclLabelDirective {}
 	}
 })
 
-export class OclErrorDirective {}
+export class OclErrorDirective {
+}
 
 
 @Directive({
@@ -54,8 +44,8 @@ export class OclErrorDirective {}
 	}
 })
 
-export class OclInputDirective {}
-
+export class OclInputDirective {
+}
 
 
 @Component({
@@ -64,39 +54,39 @@ export class OclInputDirective {}
 	styleUrls: ['./textfield.component.css'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	encapsulation: ViewEncapsulation.None
-
+	
 })
 
 export class OclTextfield implements OnDestroy {
-
+	
 	private loading: boolean;
 	private _disabled = false;
 	private _required = true;
 	private _focused = false;
 	private _id: string;
 	private _cachedUid: string;
-
-
+	
+	
 	@ContentChild(OclLabelDirective) _oclLabelChild: OclLabelDirective;
 	@ContentChild(OclInputDirective) _oclInputChild: OclInputDirective;
 	@ContentChild(OclErrorDirective) _oclErrorChild: OclErrorDirective;
-
+	
 	constructor(private _elementRef: ElementRef,
 	            private _renderer: Renderer2,
 	            private _changeDetectorRef: ChangeDetectorRef) {
-
+		
 		this.loading = false;
-
+		
 	}
-
+	
 	ngOnDestroy() {
-
+		
 	}
-
+	
 	_getHostElement() {
 		return this._elementRef.nativeElement.getElementsByTagName('input')[0];
 	}
-
+	
 	focus(): void {
 		this._getHostElement().focus();
 		this._focused = true;
@@ -106,19 +96,19 @@ export class OclTextfield implements OnDestroy {
 		this._getHostElement().blur();
 		this._focused = false;
 	}
-
+	
 	disable(): void {
 		this._getHostElement().disabled = true;
 		this._disabled = true;
 	}
-
+	
 	enable(): void {
 		this._getHostElement().disabled = false;
 		this._disabled = false;
 	}
-
+	
 	load(): void {
 		this.loading = true;
 	}
-
+	
 }

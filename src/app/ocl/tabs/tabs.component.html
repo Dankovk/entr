@@ -1,0 +1,13 @@
+<div class="ocl-tabs">
+    <div class="ocl-tabs__controls">
+        <label *ngFor="let tab of tabs" (click)="selectTab(tab)" class="{{tab.disabled ? 'ocl-tabs__label ocl-tabs__label--disabled' : 'ocl-tabs__label'}}">
+            <input [checked]="tab.active" type="radio" class="ocl-tabs__input" [name]="tab.title">
+            <div class="ocl-tabs__label-content">{{tab.title}}</div>
+        </label>
+    </div>
+    <div class="ocl-tabs__panels">
+        <div class="ocl-tabs__panel">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

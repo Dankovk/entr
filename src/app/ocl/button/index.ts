@@ -17,7 +17,7 @@ export * from './button.component';
         OclButton,
         OclButtonDirective,
         OclButtonLargeDirective
-
+    
     ],
 })
 export class OclButtonModule {

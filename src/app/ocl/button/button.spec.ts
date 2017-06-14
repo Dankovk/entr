@@ -1,26 +1,25 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {Component, DebugElement} from '@angular/core';
-import {By} from '@angular/platform-browser';
-
-import {OclButtonModule} from './index';
+import {async, TestBed} from "@angular/core/testing";
+import {Component} from "@angular/core";
+import {By} from "@angular/platform-browser";
+import {OclButtonModule} from "./index";
 
 describe('Ocl button', () => {
-
+    
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [OclButtonModule],
             declarations: [TestApp],
         });
-
+        
         TestBed.compileComponents();
     }));
-
+    
     it('renders', () => {
         let fixture = TestBed.createComponent(TestApp);
         let buttonDebugElement = fixture.debugElement.query(By.css('button'));
         expect(buttonDebugElement.nativeElement !== 'undefined');
     });
-
+    
     it('disables', () => {
         let fixture = TestBed.createComponent(TestApp);
         let buttonDebugElement = fixture.debugElement.query(By.css('button'));
@@ -28,7 +27,7 @@ describe('Ocl button', () => {
         fixture.detectChanges();
         expect(buttonDebugElement.nativeElement.disabled === true);
     });
-
+    
     it('enables', () => {
         let fixture = TestBed.createComponent(TestApp);
         let buttonDebugElement = fixture.debugElement.query(By.css('button'));
@@ -37,7 +36,7 @@ describe('Ocl button', () => {
         fixture.detectChanges();
         expect(buttonDebugElement.nativeElement.disabled === false);
     });
-
+    
     it('showsSpinner', () => {
         let fixture = TestBed.createComponent(TestApp);
         let buttonDebugElement = fixture.debugElement.query(By.css('button'));
@@ -45,7 +44,7 @@ describe('Ocl button', () => {
         fixture.detectChanges();
         expect(buttonDebugElement.nativeElement.classList.contains('ocl-button--loading') === true);
     });
-
+    
     it('hidesSpinner', () => {
         let fixture = TestBed.createComponent(TestApp);
         let buttonDebugElement = fixture.debugElement.query(By.css('button'));
@@ -54,7 +53,7 @@ describe('Ocl button', () => {
         fixture.detectChanges();
         expect(buttonDebugElement.nativeElement.classList.contains('ocl-button--loading') === false);
     });
-
+    
 });
 
 
@@ -70,4 +69,5 @@ describe('Ocl button', () => {
     <div id="enable" (click)="button.enable()"></div>
   `
 })
-class TestApp {}
+class TestApp {
+}
