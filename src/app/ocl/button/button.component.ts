@@ -14,18 +14,14 @@ import {
     host: {'class': 'ocl-button'}
 })
 
-export class OclButtonDirective {
-}
-;
+export class OclButtonDirective {};
 
 @Directive({
     selector: 'button[ocl-button-large]',
     host: {'class': 'ocl-button ocl-button--large ocl-button--round-left'}
 })
 
-export class OclButtonLargeDirective {
-}
-;
+export class OclButtonLargeDirective {};
 
 @Component({
     selector: 'button[ocl-button], button[ocl-button-large]',

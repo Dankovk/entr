@@ -69,5 +69,4 @@ describe('Ocl button', () => {
     <div id="enable" (click)="button.enable()"></div>
   `
 })
-class TestApp {
-}
+class TestApp {}

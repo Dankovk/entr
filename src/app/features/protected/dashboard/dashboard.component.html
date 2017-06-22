@@ -1,1 +1,35 @@
-<h1 class="ocl-hello">Hello from Dashboard!</h1>
+<div ocl-main-nav [name]="user.name ? user.name : ''"></div>
+<div class="container">
+    <div class="entrada-wrapper dashboard">
+        <div class="row">
+            <div class="col s12">
+                <h1 class="entrada-page-heading">Learn and teach using our video libraries:</h1>
+            </div>
+            <div class="dashboard__big-buttons">
+                <button ocl-button-large #buttonLarge>
+                    <img src="http://placehold.it/50x50" class="ocl-button__image--round" alt="">
+                    <span class="ocl-button__label">Skill Library</span>
+                    <div class="ocl-button--hex-right"></div>
+                </button>
+                <button ocl-button-large #buttonLarge>
+                    <img src="http://placehold.it/50x50" class="ocl-button__image--round" alt="">
+                    <span class="ocl-button__label">Skill Library</span>
+                    <div class="ocl-button--hex-right"></div>
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s5">
+                <ocl-tabs>
+                    <ocl-tab tabTitle="Student activity"> Some content</ocl-tab>
+                    <ocl-tab tabTitle="Your activity"> Some content another</ocl-tab>
+                </ocl-tabs>
+            </div>
+            <div class="col s2"></div>
+            <div class="col s5">
+                <ocl-webinar-card></ocl-webinar-card>
+            </div>
+        </div>
+    </div>
+</div>

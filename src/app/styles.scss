@@ -176,6 +176,8 @@
 /* This file is for setting global styles  */
 // @import 'variables';
 
+@import "@one/icon/icon";
+
 
 $num-cols: 12 !default;
 $gutter-width: 1.5rem !default;
@@ -211,7 +213,7 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
 }
 @media #{$large-and-up} {
 	.container {
-		width: 70%;
+		width: 90%;
 	}
 }
 .container .row {

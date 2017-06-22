@@ -7,15 +7,18 @@ import { DashboardActions } from './dashboard.actions';
 import { dashboardReducer } from './dashboard.reducer';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import {OclModule} from "../../../ocl/ocl.module";
+
 
 @NgModule({
 	imports: [
 		CommonModule,
 		FormsModule,
-		DashboardRoutingModule
+		DashboardRoutingModule,
+		OclModule
 	],
 	declarations: [
-		DashboardComponent
+		DashboardComponent,
 	]
 })
 export class DashboardModule {

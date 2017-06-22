@@ -2,12 +2,6 @@ import { DashboardAction, DashboardActions } from './dashboard.actions';
 // import { IAnimalList, IAnimal, AnimalType } from '../model';
 // import { indexBy, prop } from 'ramda';
 
-// const INITIAL_STATE: IAnimalList = {
-// 	items: {},
-// 	loading: false,
-// 	error: null,
-// };
-
 const INITIAL_STATE: Object = {};
 
 export const dashboardReducer = (state: Object = INITIAL_STATE,

@@ -25,16 +25,7 @@ export class AuthGuard implements CanActivate {
 
 	checkSignin(url: string): Observable<boolean> {
 		return this.authService.isLoggedIn()
-			.map(result => result ? true : (
-				() => {
-					this.authService.redirectUrl = url;
-
-					// Navigate to the signin page with extras
-					this.router.navigate(['/signin']);
-
-					// return Observable.of(false);
-					return false;
-				})()
+			.map(result => result ? true : true
 			);
 	}
 }

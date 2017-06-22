@@ -2,7 +2,7 @@ import { ApolloClient, createNetworkInterface } from 'apollo-client';
 
 const client = new ApolloClient({
 	networkInterface: createNetworkInterface({
-		uri: "`${GRAPH_API_BASE_URL}`",
+		uri: "https://api.graph.cool/simple/v1/cj2xr9uma7xa20133jfpk4dsq",
 		// opts: {
 		// 	credentials: 'same-origin',
 		// },

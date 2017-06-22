@@ -8,6 +8,4 @@ import {Component, ChangeDetectionStrategy, ViewEncapsulation} from "@angular/co
     encapsulation: ViewEncapsulation.None
 })
 
-export class OclWebinarCard {
-}
-;
+export class OclWebinarCard {};
