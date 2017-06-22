@@ -17,20 +17,20 @@ describe('OclTextfield', function () {
 				TextfieldTestController
 			],
 		});
-		
+
 		TestBed.compileComponents();
 	}));
-	
+
 	it('should treat text input type as empty at init', () => {
 		let fixture = TestBed.createComponent(TextfieldTestController);
 		fixture.detectChanges();
-		
+
 		let el = fixture.debugElement.query(By.css('label')).nativeElement;
 		expect(el).not.toBeNull();
 		expect(el.classList.contains('mat-empty')).toBe(true);
 	});
-	
-	
+
+
 	@Component({
 		template: `
         <ocl-textfield #input>
@@ -41,4 +41,6 @@ describe('OclTextfield', function () {
   `
 	})
 	class TextfieldTestController {
+
 	}
+});
