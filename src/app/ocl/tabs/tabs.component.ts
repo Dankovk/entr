@@ -10,7 +10,7 @@ import {OclTab} from "./tab.component";
 
 
 @Component({
-	selector: 'ocl-tabs',
+	selector: '[ocl-tabs], ocl-tabs',
 	templateUrl: './tabs.component.html',
 	styleUrls: ['./tabs.component.css'],
 	changeDetection: ChangeDetectionStrategy.OnPush,

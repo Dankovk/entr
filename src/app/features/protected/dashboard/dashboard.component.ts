@@ -7,8 +7,16 @@ import {select} from "@angular-redux/store";
 import { Apollo, ApolloQueryObservable } from 'apollo-angular';
 import gql from 'graphql-tag';
 
-interface QueryResponse  {
+interface UserResponse  {
 	User: Object
+}
+
+interface Webinars  {
+	User: Object
+}
+
+interface StudentAssignment {
+	AssignmentActivity: any
 }
 
 const CurrentUserForProfile = gql`
@@ -31,6 +39,15 @@ const Webinars = gql`
   }
 `;
 
+const studentAssignmentActivity = gql`
+	query {
+		AssignmentHistoryEntry (id: "cj2z1m9rtmojg01749i36wspj") {
+			lastEventDate
+		}
+	}
+`;
+
+
 @Component({
 	selector: 'entrada-dashboard',
 	templateUrl: './dashboard.component.html',
@@ -40,22 +57,30 @@ const Webinars = gql`
 export class DashboardComponent implements OnDestroy, OnInit {
 	destroyed$: Subject<any> = new Subject<any>();
 	user: any = '';
-	webinars: any;
+	// webinars: any;
+	studentActivity: any;
+	
 	constructor(
 		private http: TransferHttp,
 		private apollo: Apollo
 	) {}
 
 	ngOnInit() {
-		this.apollo.watchQuery<QueryResponse>({
+		this.apollo.watchQuery<UserResponse>({
 			query: CurrentUserForProfile,
 		}).subscribe(({data}) => {
 			this.user = data.User;
 		});
-		this.apollo.watchQuery<QueryResponse>({
-			query: Webinars,
+		// this.apollo.watchQuery<Webinars>({
+		// 	query: Webinars,
+		// }).subscribe(({data}) => {
+		// 	this.webinars = data.User;
+		// });
+		this.apollo.watchQuery<StudentAssignment>({
+			query: studentAssignmentActivity,
 		}).subscribe(({data}) => {
-			this.webinars = data.User;
+			console.log(data);
+			this.studentActivity = data.AssignmentActivity;
 		});
 	}
 

@@ -1,7 +1,7 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
-	selector: 'ocl-tab',
+	selector: '[ocl-tab], ocl-tab',
 	styleUrls: ['./tabs.component.css'],
 	templateUrl: 'tab.component.html',
 	encapsulation: ViewEncapsulation.None
