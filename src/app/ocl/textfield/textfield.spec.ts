@@ -6,7 +6,7 @@ import {OclTextfieldModule} from "./index";
 import {OclTextfield} from "./textfield.component";
 
 
-describe('OclTextfield', function () {
+describe('Ocl textfield', function () {
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			imports: [
@@ -21,13 +21,27 @@ describe('OclTextfield', function () {
 		TestBed.compileComponents();
 	}));
 
-	it('should treat text input type as empty at init', () => {
+	it('renders', () => {
 		let fixture = TestBed.createComponent(TextfieldTestController);
-		fixture.detectChanges();
+		let buttonDebugElement = fixture.debugElement.query(By.css('button'));
+		expect(buttonDebugElement.nativeElement !== 'undefined');
+	});
 
-		let el = fixture.debugElement.query(By.css('label')).nativeElement;
-		expect(el).not.toBeNull();
-		expect(el.classList.contains('mat-empty')).toBe(true);
+	it('disables', () => {
+		let fixture = TestBed.createComponent(TextfieldTestController);
+		let buttonDebugElement = fixture.debugElement.query(By.css('button'));
+		fixture.nativeElement.querySelector('#disable').click();
+		fixture.detectChanges();
+		expect(buttonDebugElement.nativeElement.disabled === true);
+	});
+
+	it('enables', () => {
+		let fixture = TestBed.createComponent(TextfieldTestController);
+		let buttonDebugElement = fixture.debugElement.query(By.css('button'));
+		buttonDebugElement.nativeElement.disabled = true;
+		fixture.nativeElement.querySelector('#enable').click();
+		fixture.detectChanges();
+		expect(buttonDebugElement.nativeElement.disabled === false);
 	});
 
 
