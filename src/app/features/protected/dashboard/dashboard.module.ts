@@ -7,6 +7,7 @@ import { DashboardActions } from './dashboard.actions';
 import { dashboardReducer } from './dashboard.reducer';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { DashboardService } from './dashboard.service';
 import {OclModule} from "../../../ocl/ocl.module";
 
 
@@ -19,7 +20,8 @@ import {OclModule} from "../../../ocl/ocl.module";
 	],
 	declarations: [
 		DashboardComponent,
-	]
+	],
+	providers: [DashboardService]
 })
 export class DashboardModule {
 	static reducer = () => dashboardReducer;

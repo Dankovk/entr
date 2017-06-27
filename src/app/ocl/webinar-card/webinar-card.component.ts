@@ -1,4 +1,4 @@
-import {Component, ChangeDetectionStrategy, ViewEncapsulation} from "@angular/core";
+import {Component, ChangeDetectionStrategy, ViewEncapsulation, Input} from "@angular/core";
 
 @Component({
     selector: 'ocl-webinar-card',
@@ -8,4 +8,8 @@ import {Component, ChangeDetectionStrategy, ViewEncapsulation} from "@angular/co
     encapsulation: ViewEncapsulation.None
 })
 
-export class OclWebinarCard {};
+export class OclWebinarCard {
+    @Input() text: string;
+    @Input() title: string;
+    @Input() webinars: any;
+};
