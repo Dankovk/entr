@@ -27,12 +27,12 @@ const CurrentUserForProfile = gql`
   }
 `;
 
-//has to be done
-const eventRegister = gql`
-`;
-
-const eventDeregister = gql`
-`;
+// //has to be done
+// const eventRegister = gql`
+// `;
+//
+// const eventDeregister = gql`
+// `;
 
 const Webinar = gql`
   query {

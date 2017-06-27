@@ -125,6 +125,7 @@
     "methods": "1.1.2",
     "one": "git+ssh://git@bitbucket.org:entradapiano/one.git#integration-to-entrada",
     "redux": "^3.6.0",
+    "redux-localstorage": "^0.4.1",
     "redux-logger": "^3.0.1",
     "redux-observable": "^0.14.1",
     "rxjs": "^5.3.0",

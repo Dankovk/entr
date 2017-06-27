@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 // extensions that sync form and route location state between
 // our store and Angular.
 import { NgReduxModule, NgRedux, DevToolsExtension } from '@angular-redux/store';
+import persistState from 'redux-localstorage'
 import { NgReduxRouterModule, NgReduxRouter } from '@angular-redux/router';
 import { composeReducers, provideReduxForms } from '@angular-redux/form';
 import { Apollo } from 'apollo-angular';
@@ -35,6 +36,7 @@ export class StoreModule {
 
 		let enhancers = [
 			applyMiddleware(apollo.middleware()),
+			persistState(),
 		];
 
 		if (devTools.isEnabled()) {
