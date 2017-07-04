@@ -26,23 +26,11 @@
     <div class="ocl-card__footer ocl-webinar-card__footer">
         <h3 class="ocl-webinar-card__footer-title">Recent webinars</h3>
         <ul class="ocl-webinar-card__footer-list">
-            <li class="ocl-webinar-card__footer-list-item">
+            <li *ngFor="let webinar of webinars" class="ocl-webinar-card__footer-list-item">
                 <a href="#" class="ocl-webinar-card__footer-image-link">
-                    <img src="http://placehold.it/110x61" class="ocl-webinar-card__footer-image">
+                    <img src="{{webinar.image || 'http://via.placeholder.com/350x150'}}" class="ocl-webinar-card__footer-image">
                 </a>
-                <h4 class="ocl-webinar-card__footer-list-item-title">Month</h4>
-            </li>
-            <li class="ocl-webinar-card__footer-list-item">
-                <a href="#" class="ocl-webinar-card__footer-image-link">
-                    <img src="http://placehold.it/110x61" class="ocl-webinar-card__footer-image">
-                </a>
-                <h4 class="ocl-webinar-card__footer-list-item-title">Month</h4>
-            </li>
-            <li class="ocl-webinar-card__footer-list-item">
-                <a href="#" class="ocl-webinar-card__footer-image-link">
-                    <img src="http://placehold.it/110x61" class="ocl-webinar-card__footer-image">
-                </a>
-                <h4 class="ocl-webinar-card__footer-list-item-title">Month</h4>
+                <h4 class="ocl-webinar-card__footer-list-item-title">{{webinar.title}}</h4>
             </li>
         </ul>
     </div>
