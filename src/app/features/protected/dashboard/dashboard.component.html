@@ -28,7 +28,7 @@
             </div>
             <div class="col s2"></div>
             <div class="col s5">
-                <ocl-webinar-card [title]="webinar.title" [text]="webinar.text"></ocl-webinar-card>
+                <ocl-webinar-card [text]="webinar.allEvents ? webinar.allEvents[0].text : '' " [title]="webinar.allEvents ? webinar.allEvents[0].title : ''" [webinars]="webinar.allEvents"></ocl-webinar-card>
             </div>
         </div>
     </div>
