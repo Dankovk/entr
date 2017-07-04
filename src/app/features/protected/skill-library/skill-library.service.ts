@@ -8,7 +8,7 @@ interface UserResponse {
 	User: Object
 }
 
-interface StudentLink {
+interface SkillLibrary {
 	Event: Object
 }
 
@@ -27,7 +27,7 @@ const CurrentUserForProfile = gql`
   }
 `;
 
-const StudentLink = gql`
+const SkillLibrary = gql`
   query {
    Event {
       title
@@ -38,7 +38,7 @@ const StudentLink = gql`
   }
 `;
 
-const StudentLinks = gql`
+const SkillLibraries = gql`
   query {
    allEvents {
       title
@@ -59,7 +59,7 @@ const AssignmentActivity = gql`
 
 
 @Injectable()
-export class StudentLinkService {
+export class SkillLibraryService {
 	constructor(private apollo: Apollo) {}
 
 	loadUser() {
@@ -72,10 +72,10 @@ export class StudentLinkService {
 		});
 	}
 
-	loadStudentLinks() {
+	loadSkillLibraries() {
 		return new Observable(observer => {
-			this.apollo.watchQuery<StudentLink>({
-				query: StudentLinks,
+			this.apollo.watchQuery<SkillLibrary>({
+				query: SkillLibraries,
 			}).subscribe(({data}) => {
 				observer.next(data);
 			});

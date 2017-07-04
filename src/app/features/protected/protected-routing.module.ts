@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardModule } from './dashboard/dashboard.module';
 import { StudentLinkModule } from './student-link/student-link.module';
+import { SkillLibraryModule } from './skill-library/skill-library.module';
 
 const protectedRoutes: Routes = [
-	{path: '', loadChildren: () => DashboardModule},
-	{path: 'student-link', loadChildren: () => StudentLinkModule}
+	{path: 'student-link', loadChildren: () => DashboardModule},
+	{path: '', loadChildren: () => SkillLibraryModule},
+	{path: 'skill-library', loadChildren: () => StudentLinkModule}
 ];
 
 @NgModule({

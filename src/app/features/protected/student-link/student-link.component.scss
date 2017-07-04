@@ -1,0 +1,24 @@
+@import "@one/card/card";
+@import "@one/student-link-card/student-link-card";
+@import "@one/student-link-filter/student-link-filter";
+@import "@one/filter-toggle/filter-toggle";
+
+.ocl-student-link-filter__title {
+	margin-bottom: 5px;
+}
+
+.ocl-filter-toggle {
+	text-align: center;
+}
+
+.ocl-student-link-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: rem(80px);
+}
+
+.ocl-student-link-card {
+	width: rem(244px);
+	margin-right: rem(25px);
+	margin-bottom: rem(90px);
+}

@@ -23,6 +23,10 @@ export const routes: Routes = [
 		canActivate: [AuthGuard],
 		loadChildren: () => ProtectedModule
 	},
+	{ path: 'skill-library',
+		canActivate: [AuthGuard],
+		loadChildren: () => ProtectedModule
+	},
 	{ path: 'signin',
 		loadChildren: () => SigninModule
 	},
