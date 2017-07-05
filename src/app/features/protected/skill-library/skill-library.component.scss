@@ -1,5 +1,34 @@
+@import "@one/card/card";
 @import "@one/page-title/page-title";
 @import "@one/button/button";
+@import "@one/module-card/module-card";
 
+.ocl-skill-library-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
 
+.ocl-module-card {
+	width: rem(244px);
+	margin-right: rem(25px);
+	margin-bottom: rem(40px);
+}
 
+.ocl-title--red {
+	font-size: rem(34px);
+	margin-bottom: rem(35px);
+}
+
+.ocl-title--black {
+	font-size: rem(26px);
+	margin-top: rem(35px);
+	margin-bottom: rem(20px);
+}
+
+.ocl-page-title {
+	.ocl-button__label {
+		font-size: rem(18px);
+		font-style: normal;
+		font-weight: 400;
+	}
+}

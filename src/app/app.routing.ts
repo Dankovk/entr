@@ -27,6 +27,10 @@ export const routes: Routes = [
 		canActivate: [AuthGuard],
 		loadChildren: () => ProtectedModule
 	},
+	{ path: 'student-assignment',
+		canActivate: [AuthGuard],
+		loadChildren: () => ProtectedModule
+	},
 	{ path: 'signin',
 		loadChildren: () => SigninModule
 	},
