@@ -7,9 +7,9 @@ import { SkillLibraryModule } from './skill-library/skill-library.module';
 import { StudentAssignmentDetailModule } from "./student-assignment/student-assignment.module";
 
 const protectedRoutes: Routes = [
-	{path: 'student-link', loadChildren: () => DashboardModule},
-	{path: '', loadChildren: () => SkillLibraryModule},
-	{path: 'skill-library', loadChildren: () => StudentLinkModule},
+	{path: '', loadChildren: () => DashboardModule},
+	{path: 'skill-library', loadChildren: () => SkillLibraryModule},
+	{path: 'student-link', loadChildren: () => StudentLinkModule},
 	{path: 'student-assignment', loadChildren: () => StudentAssignmentDetailModule}
 ];
 
