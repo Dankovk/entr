@@ -15,7 +15,6 @@ import { GuilistModule } from './features/public/guilist/guilist.module';
 
 export const routes: Routes = [
 	{ path: '',
-		pathMatch: 'full',
 		canActivate: [AuthGuard],
 		loadChildren: () => ProtectedModule
 	},
