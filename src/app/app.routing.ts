@@ -26,6 +26,18 @@ export const routes: Routes = [
 		canActivate: [AuthGuard],
 		loadChildren: () => ProtectedModule
 	},
+	{ path: 'repertoire-library',
+		canActivate: [AuthGuard],
+		loadChildren: () => ProtectedModule
+	},
+	{ path: 'repertoire-page',
+		canActivate: [AuthGuard],
+		loadChildren: () => ProtectedModule
+	},
+	{ path: 'quiz-page',
+		canActivate: [AuthGuard],
+		loadChildren: () => ProtectedModule
+	},
 	{ path: 'student-assignment',
 		canActivate: [AuthGuard],
 		loadChildren: () => ProtectedModule
@@ -41,5 +53,8 @@ export const routes: Routes = [
 		path: 'guilist',
 		loadChildren: () => GuilistModule
 	},
-	{ path: '**', component: NotFound404Component }
+	{
+		path: '**',
+		component: NotFound404Component
+	}
 ];

@@ -7,14 +7,16 @@ import {OclWebinarCardModule} from "./webinar-card/index";
 import {OclTabsModule} from "./tabs/index";
 import {OclMainNavModule} from "./main-nav/main-nav.module";
 import {OclStudentCardModule} from "./student-card/student-card.module";
+import {OclRepertoireCardModule} from "./repertoire-card/repertoire-card.module";
+
 
 
 
 
 @NgModule({
-	imports: [CommonModule, OclButtonModule, OclTextfieldModule, OclWebinarCardModule, OclTabsModule, OclMainNavModule, OclStudentCardModule],
+	imports: [CommonModule, OclButtonModule, OclTextfieldModule, OclWebinarCardModule, OclTabsModule, OclMainNavModule, OclStudentCardModule, OclRepertoireCardModule],
 	// declarations: [ AwesomePipe, HighlightDirective ],
 	exports: [/* AwesomePipe, HighlightDirective, */
-		CommonModule, FormsModule, OclButtonModule, OclTextfieldModule, OclWebinarCardModule, OclTabsModule, OclMainNavModule, OclStudentCardModule]
+		CommonModule, FormsModule, OclButtonModule, OclTextfieldModule, OclWebinarCardModule, OclTabsModule, OclMainNavModule, OclStudentCardModule, OclRepertoireCardModule]
 })
 export class OclModule {}

@@ -1,0 +1,9 @@
+@import "@one/card/card";
+@import "@one/repertoire-card/repertoire-card";
+@import "@one/module-card/module-card";
+
+.ocl-module-card {
+	width: 30%;
+	float: left;
+	margin-left: 10px;
+}
