@@ -1,0 +1,35 @@
+<div class="ocl-card ocl-card--no-border-header ocl-card--no-border-footer ocl-card-student">
+    <div class="ocl-card__header">
+        <div class="ocl-card__header-content">
+            <div class="ocl-student-card__header-name">
+                {{name | async}}
+            </div>
+            <div class="ocl-student-card__header-date">
+                {{date | async}}
+            </div>
+        </div>
+    </div>
+    <div class="ocl-card__body ocl-student-card__body">
+        <div class="ocl-card__body-content ocl-student-card__body-content">
+            <ul class="ocl-student-card__activity-list">
+                <li *ngFor="let event of events" class="ocl-student-card__activity">
+                    <div class="ocl-student-card__activity-title">
+                        <i class="fa {{event.icon}}" aria-hidden="true"></i> {{event.title}}
+                    </div>
+                    <div class="ocl-student-card__activity-item">
+                        {{event.item}}
+                    </div>
+                    <div class="ocl-student-card__activity-detail">
+                        {{event.descr}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="ocl-card__footer ocl-student-card__footer">
+        <div class="ocl-card__footer-content ocl-student-card__footer-content">
+            <a href="#" class="ocl-student-card__activity-more">See More Activity <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            <a href="#" class="ocl-student-card__activity-full">Full History</a>
+        </div>
+    </div>
+</div>
