@@ -1,18 +1,18 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
-import {OclStudentCard} from "./student-card.component";
+import {OclQuizCard} from "./quiz-card.component";
 
-export * from './student-card.component';
+export * from './quiz-card.component';
 
 @NgModule({
 	imports: [
 		CommonModule,
 	],
 	exports: [
-		OclStudentCard
+		OclQuizCard
 	],
 	declarations: [
-		OclStudentCard
+		OclQuizCard
 	],
 })
-export class OclStudentCardModule {}
+export class OclQuizCardModule {}

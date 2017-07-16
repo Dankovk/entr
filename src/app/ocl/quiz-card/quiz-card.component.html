@@ -1,35 +1,24 @@
-<div class="ocl-card ocl-card--no-border-header ocl-card--no-border-footer ocl-card-student">
-    <div class="ocl-card__header">
-        <div class="ocl-card__header-content">
-            <div class="ocl-student-card__header-name">
-                {{name | async}}
-            </div>
-            <div class="ocl-student-card__header-date">
-                {{date | async}}
-            </div>
+<div class="ocl-card ocl-card--square-top ocl-module-card ocl-quiz-card ocl-card--full-width-header">
+    <div class="ocl-card__header ocl-module-card__header ocl-quiz-card__header">
+        <div class="ocl-module-card__header-content ocl-quiz-card__header-content">
+            <a href="#" class="ocl-module-card__image">
+                <img class="ocl-module-card__image-element" src="http://placehold.it/350x150" alt="">
+                <div class="ocl-button">
+                    <span>Quiz</span>
+                </div>
+            </a>
         </div>
-    </div>
-    <div class="ocl-card__body ocl-student-card__body">
-        <div class="ocl-card__body-content ocl-student-card__body-content">
-            <ul class="ocl-student-card__activity-list">
-                <li *ngFor="let event of events" class="ocl-student-card__activity">
-                    <div class="ocl-student-card__activity-title">
-                        <i class="fa {{event.icon}}" aria-hidden="true"></i> {{event.title}}
-                    </div>
-                    <div class="ocl-student-card__activity-item">
-                        {{event.item}}
-                    </div>
-                    <div class="ocl-student-card__activity-detail">
-                        {{event.descr}}
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="ocl-card__footer ocl-student-card__footer">
-        <div class="ocl-card__footer-content ocl-student-card__footer-content">
-            <a href="#" class="ocl-student-card__activity-more">See More Activity <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-            <a href="#" class="ocl-student-card__activity-full">Full History</a>
+        <div class="ocl-card__body module-card__body ocl-quiz-card__body">
+            <div class="ocl-card__body-content ocl-module-card__body-content ocl-quiz-card__body-content">
+                <a href="#" class="ocl-module-card__link">
+                    <h3 class="ocl-module-card__title">
+                        Sitting position
+                    </h3>
+                </a>
+                <span class="ocl-module-card__detail">
+                    <i class="fa fa-clock-o"></i> Not yet taken
+                </span>
+            </div>
         </div>
     </div>
 </div>

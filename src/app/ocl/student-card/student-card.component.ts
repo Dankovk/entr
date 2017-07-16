@@ -1,7 +1,7 @@
 import {Component, ChangeDetectionStrategy, ViewEncapsulation, Input} from "@angular/core";
 
 @Component({
-	selector: 'ocl-student-card',
+	selector: 'ocl-student-card, div[ocl-student-card]',
 	templateUrl: './student-card.component.html',
 	styleUrls: ['./student-card.component.css'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
