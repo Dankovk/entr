@@ -1,3 +1,9 @@
+@import "@one/typography/mixins";
+
+.entrada-body {
+	@include ocl-typography-base;
+}
+
 .entrada-wrapper {
   padding-top: 55px;
 }
