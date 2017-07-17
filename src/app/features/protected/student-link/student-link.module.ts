@@ -8,8 +8,7 @@ import { studentLinkReducer } from './student-link.reducer';
 
 import { StudentLinkRoutingModule } from './student-link-routing.module';
 import { StudentLinkService } from './student-link.service';
-import {OclModule} from "../../../ocl/ocl.module";
-
+import { OclModule } from "../../../ocl/ocl.module";
 
 @NgModule({
 	imports: [
