@@ -9,19 +9,19 @@ import {
 } from "@angular/core";
 
 @Directive({
-    selector: 'button[ocl-button], ocl-button',
-    host: {
-    	'class': 'ocl-button',
-    	'[class.ocl-button--loading]': 'loading',
-    	'[class.ocl-button--add-loader]': 'loading'
-    }
+	selector: 'button[ocl-button], ocl-button',
+	host: {
+		'class': 'ocl-button',
+		'[class.ocl-button--loading]': 'loading',
+		'[class.ocl-button--add-loader]': 'loading'
+	}
 })
 
 export class OclButtonDirective {};
 
 @Directive({
-    selector: 'button[ocl-button-large], ocl-button-large',
-    host: {'class': 'ocl-button ocl-button--large ocl-button--round-left ocl-button--hex-right'}
+	selector: 'button[ocl-button-large], ocl-button-large',
+	host: {'class': 'ocl-button ocl-button--large ocl-button--round-left ocl-button--hex-right'}
 })
 
 export class OclButtonLargeDirective {};
