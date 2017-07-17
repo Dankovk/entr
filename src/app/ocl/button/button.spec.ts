@@ -1,7 +1,7 @@
 import { async, TestBed } from "@angular/core/testing";
 import { Component } from "@angular/core";
 import { By } from "@angular/platform-browser";
-import { OclButtonModule } from "./index";
+import { OclButtonModule } from "./button.module";
 
 describe('Ocl button', () => {
 	beforeEach(async(() => {
