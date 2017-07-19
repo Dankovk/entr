@@ -1,5 +1,9 @@
 @import "@one/typography/mixins";
 
+@import "@one/layout/ocl-grid";
+@import "@one/page-title/page-title";
+@import "@one/icon/icon";
+
 .entrada-body {
 	@include ocl-typography-base;
 }
@@ -24,7 +28,7 @@
 
 .ocl-title--black {
   margin-bottom: rem(15px);
-  color: #444444;
+  color: #444;
   font-size: rem(26px);
   font-style: italic;
   font-weight: bold;
