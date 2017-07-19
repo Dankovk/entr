@@ -1,6 +1,6 @@
-import {Component, OnDestroy, OnInit} from "@angular/core";
-import {Subject} from "rxjs/Subject";
-import {DashboardService} from "./dashboard.service";
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Subject } from "rxjs/Subject";
+import { DashboardService } from "./dashboard.service";
 import gql from "graphql-tag";
 
 const studentAssignmentActivity = gql`
@@ -22,10 +22,9 @@ export class DashboardComponent implements OnDestroy, OnInit {
 	user: any = '';
 	webinar: any = {};
 	studentActivity: any;
-	
-	constructor(private service: DashboardService) {
-	}
-	
+
+	constructor(private service: DashboardService) {}
+
 	ngOnInit() {
 		this.service.loadUser().subscribe((data) => {
 			this.user = data;
@@ -37,7 +36,7 @@ export class DashboardComponent implements OnDestroy, OnInit {
 			this.studentActivity = data;
 		});
 	}
-	
+
 	ngOnDestroy() {
 		this.destroyed$.next();
 	}

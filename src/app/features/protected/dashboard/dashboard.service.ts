@@ -69,7 +69,7 @@ const AssignmentActivity = gql`
 export class DashboardService {
 	constructor(private apollo: Apollo) {
 	}
-	
+
 	loadUser() {
 		return new Observable(observer => {
 			this.apollo.watchQuery<UserResponse>({
@@ -79,7 +79,7 @@ export class DashboardService {
 			});
 		});
 	}
-	
+
 	loadWebinars() {
 		return new Observable(observer => {
 			this.apollo.watchQuery<Webinar>({
@@ -89,7 +89,7 @@ export class DashboardService {
 			});
 		});
 	}
-	
+
 	loadStudentAssignment() {
 		return new Observable(observer => {
 			this.apollo.watchQuery<StudentAssignment>({
@@ -99,13 +99,13 @@ export class DashboardService {
 			});
 		});
 	}
-	
+
 	registerEvent() {
 		//not implemented yet
 	}
-	
+
 	deregisterEvent() {
 		//not implemented yet
 	}
-	
+
 }
