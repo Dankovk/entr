@@ -3,7 +3,7 @@ import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { OclButtonModule } from "./button/button.module";
 import { OclTextfieldModule } from "./textfield/index";
-import { OclWebinarCardModule } from "./webinar-card/index";
+import { OclWebinarCardModule } from "./webinar-card/webinar-card.module";
 import { OclTabsModule } from "./tabs/index";
 import { OclMainNavModule } from "./main-nav/main-nav.module";
 import { OclStudentCardModule } from "./student-card/student-card.module";
