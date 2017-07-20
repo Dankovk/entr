@@ -12,6 +12,10 @@ interface Webinar {
 	Event: Object
 }
 
+interface WatchEvent {
+	Event: Object
+}
+
 interface StudentAssignment {
 	allAssignmentHistoryEntries: any
 }
@@ -56,6 +60,36 @@ const Webinars = gql`
   }
 `;
 
+const WatchEvent = gql`
+  query {
+   allEvents {
+        image
+		imageText
+		title
+		titleLink
+		subTitle
+		subTitleLink
+		detail
+    }
+  }
+`;
+
+const WatchEvents = gql`
+  query {
+   allEvents {
+        type
+        image
+		imageText
+		title
+		titleLink
+		subTitle
+		subTitleLink
+		detail
+    }
+  }
+`;
+
+
 const AssignmentActivity = gql`
 	query {
 		allAssignmentHistoryEntries {
@@ -84,6 +118,16 @@ export class DashboardService {
 		return new Observable(observer => {
 			this.apollo.watchQuery<Webinar>({
 				query: Webinars,
+			}).subscribe(({data}) => {
+				observer.next(data);
+			});
+		});
+	}
+
+	loadWatchEvents() {
+		return new Observable(observer => {
+			this.apollo.watchQuery<WatchEvent>({
+				query: WatchEvents,
 			}).subscribe(({data}) => {
 				observer.next(data);
 			});

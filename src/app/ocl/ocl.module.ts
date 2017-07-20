@@ -4,6 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { OclButtonModule } from "./button/button.module";
 import { OclTextfieldModule } from "./textfield/index";
 import { OclWebinarCardModule } from "./webinar-card/webinar-card.module";
+import { OclWatchEventModule } from "./watch-event/watch-event.module";
 import { OclTabsModule } from "./tabs/index";
 import { OclMainNavModule } from "./main-nav/main-nav.module";
 import { OclStudentCardModule } from "./student-card/student-card.module";
@@ -16,6 +17,7 @@ import { OclQuizCardModule } from "./quiz-card/quiz-card.module";
 		OclButtonModule,
 		OclTextfieldModule,
 		OclWebinarCardModule,
+		OclWatchEventModule,
 		OclTabsModule,
 		OclMainNavModule,
 		OclStudentCardModule,
@@ -29,6 +31,7 @@ import { OclQuizCardModule } from "./quiz-card/quiz-card.module";
 		OclButtonModule,
 		OclTextfieldModule,
 		OclWebinarCardModule,
+		OclWatchEventModule,
 		OclTabsModule,
 		OclMainNavModule,
 		OclStudentCardModule,

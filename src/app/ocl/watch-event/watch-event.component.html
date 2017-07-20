@@ -1,0 +1,14 @@
+<div *ngFor="let watchEvent of watchEvents" class="ocl-watch-event">
+	<img class="ocl-watch-event__image" src="{{watchEvent.image || 'http://placehold.it/188x106'}}" alt="{{watchEvent.imageText || ''}}"/>
+	<div class="ocl-watch-event__content">
+		<a class="ocl-watch-event__title" href="{{watchEvent.titleLink}}">
+			{{watchEvent.title}}
+		</a>
+		<a class="ocl-watch-event__subtitle" href="{{watchEvent.subTitleLink}}">
+			{{watchEvent.subTitle}}
+		</a>
+		<span class="ocl-watch-event__detail">
+			{{watchEvent.detail}}
+		</span>
+	</div>
+</div>

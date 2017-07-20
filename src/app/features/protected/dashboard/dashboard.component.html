@@ -21,7 +21,11 @@
 			<div class="ocl-grid-col s6">
 				<ocl-tabs>
 					<ocl-tab tabTitle="Student activity"> Some content</ocl-tab>
-					<ocl-tab tabTitle="Your activity"> Some content another</ocl-tab>
+					<ocl-tab tabTitle="Your activity">
+						<ocl-watch-event
+								[watchEvents]="watchEvent.allEvents"
+						></ocl-watch-event>
+					</ocl-tab>
 				</ocl-tabs>
 			</div>
 			<div class="ocl-grid-col s1"></div>

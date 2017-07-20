@@ -21,6 +21,7 @@ export class DashboardComponent implements OnDestroy, OnInit {
 	destroyed$: Subject<any> = new Subject<any>();
 	user: any = '';
 	webinar: any = {};
+	watchEvent: any = {};
 	studentActivity: any;
 
 	constructor(private service: DashboardService) {}
@@ -31,6 +32,10 @@ export class DashboardComponent implements OnDestroy, OnInit {
 		});
 		this.service.loadWebinars().subscribe((data) => {
 			this.webinar = data;
+		});
+		this.service.loadWatchEvents().subscribe((data) => {
+			this.watchEvent = data;
+			console.log(data);
 		});
 		this.service.loadStudentAssignment().subscribe((data) => {
 			this.studentActivity = data;

@@ -1,6 +1,6 @@
 @import "@one/typography/mixins";
 
-@import "@one/layout/ocl-grid";
+//@import "@one/layout/ocl-grid";
 @import "@one/page-title/page-title";
 @import "@one/icon/icon";
 
@@ -25,6 +25,7 @@
   font-weight: bold;
   line-height: rem(42px);
 }
+
 
 .ocl-title--black {
   margin-bottom: rem(15px);
