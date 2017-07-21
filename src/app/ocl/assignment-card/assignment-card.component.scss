@@ -1,0 +1,18 @@
+@import "@one/assignment-card/assignment-card";
+@import "@one/assignment-progress/assignment-progress";
+@import "@one/card/card";
+@import "@one/button/button";
+
+.ocl-assignment-card {
+	margin: 20px 0;
+}
+
+.ocl-assignment-card__list-item {
+	flex-wrap: wrap;
+}
+
+.ocl-assignment-card__list-item-details {
+	width: 100%;
+	padding-left: 32px;
+	margin-top: -5px;
+}

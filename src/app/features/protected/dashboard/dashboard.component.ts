@@ -35,7 +35,6 @@ export class DashboardComponent implements OnDestroy, OnInit {
 		});
 		this.service.loadWatchEvents().subscribe((data) => {
 			this.watchEvent = data;
-			console.log(data);
 		});
 		this.service.loadStudentAssignment().subscribe((data) => {
 			this.studentActivity = data;

@@ -5,6 +5,9 @@ import { OclButtonModule } from "./button/button.module";
 import { OclTextfieldModule } from "./textfield/index";
 import { OclWebinarCardModule } from "./webinar-card/webinar-card.module";
 import { OclWatchEventModule } from "./watch-event/watch-event.module";
+import { OclAssignmentProgressModule } from "./assignment-progress/assignment-progress.module";
+import { OclAssignmentItemModule } from "./assignment-item/assignment-item.module";
+import { OclAssignmentCardModule } from "./assignment-card/assignment-card.module";
 import { OclTabsModule } from "./tabs/index";
 import { OclMainNavModule } from "./main-nav/main-nav.module";
 import { OclStudentCardModule } from "./student-card/student-card.module";
@@ -20,6 +23,9 @@ import { OclAssignmentActivityModule } from "./assignment-activity/assignment-ac
 		OclTextfieldModule,
 		OclWebinarCardModule,
 		OclWatchEventModule,
+		OclAssignmentProgressModule,
+		OclAssignmentItemModule,
+		OclAssignmentCardModule,
 		OclTabsModule,
 		OclMainNavModule,
 		OclStudentCardModule,
@@ -35,6 +41,9 @@ import { OclAssignmentActivityModule } from "./assignment-activity/assignment-ac
 		OclTextfieldModule,
 		OclWebinarCardModule,
 		OclWatchEventModule,
+		OclAssignmentProgressModule,
+		OclAssignmentItemModule,
+		OclAssignmentCardModule,
 		OclTabsModule,
 		OclMainNavModule,
 		OclStudentCardModule,
