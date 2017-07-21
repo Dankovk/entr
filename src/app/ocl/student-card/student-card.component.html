@@ -2,10 +2,10 @@
     <div class="ocl-card__header">
         <div class="ocl-card__header-content">
             <div class="ocl-student-card__header-name">
-                {{name | async}}
+                {{name}}
             </div>
             <div class="ocl-student-card__header-date">
-                {{date | async}}
+                {{date}}
             </div>
         </div>
     </div>
@@ -13,15 +13,14 @@
         <div class="ocl-card__body-content ocl-student-card__body-content">
             <ul class="ocl-student-card__activity-list">
                 <li *ngFor="let event of events" class="ocl-student-card__activity">
-                    <div class="ocl-student-card__activity-title">
-                        <i class="fa {{event.icon}}" aria-hidden="true"></i> {{event.title}}
-                    </div>
-                    <div class="ocl-student-card__activity-item">
-                        {{event.item}}
-                    </div>
-                    <div class="ocl-student-card__activity-detail">
-                        {{event.descr}}
-                    </div>
+                    <ocl-assignment-activity [title]="event.title" [icon]="event.icon">
+											<div *ngIf="event.title" class="ocl-student-card__activity-item">
+												{{event.item}}
+											</div>
+											<div *ngIf="event.descr" class="ocl-student-card__activity-detail">
+												{{event.descr}}
+											</div>
+										</ocl-assignment-activity>
                 </li>
             </ul>
         </div>

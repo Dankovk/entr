@@ -1,0 +1,12 @@
+<div class="ocl-assignment-activity">
+	<div class="ocl-assignment-activity__header">
+		<i class="fa {{icon}}"></i>
+		<h4 class="ocl-assignment-activity__heading">{{title}}</h4>
+		<button *ngIf="showMore" (click)="this.toggleDetail()" class="ocl-button ocl-button--link-style ocl-assignment-activity__more">
+			<span>Show more</span>
+		</button>
+	</div>
+	<div *ngIf="this.detailShown || !this.showMore" class="ocl-assignment-activity__detail">
+		<ng-content></ng-content>
+	</div>
+</div>
