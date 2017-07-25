@@ -11,5 +11,11 @@ import {Component, ChangeDetectionStrategy, ViewEncapsulation, Input} from "@ang
 export class OclStudentCard {
 	@Input() name;
 	@Input() date;
-	@Input() events;
+	@Input() activities;
+	@Input() assignmentLink;
+	open: boolean = false;
+
+	toggleMoreActivity() {
+		this.open = !this.open;
+	}
 };
