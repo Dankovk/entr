@@ -27,8 +27,8 @@
     </div>
     <div class="ocl-card__footer ocl-student-card__footer">
         <div class="ocl-card__footer-content ocl-student-card__footer-content">
-            <a href="#" class="ocl-student-card__activity-more" (click)="this.toggleMoreActivity()">{{this.open ? 'See Less Activity' : 'See More Activity'}} <i class="fa {{open ? 'fa-chevron-up' : 'fa-chevron-down'}}" aria-hidden="true"></i></a>
-            <a href="{{assignmentLink}}" *ngIf="this.activities.length > 1" class="ocl-student-card__activity-full">Full History</a>
+            <a href="#" class="ocl-student-card__activity-more" (click)="toggleMoreActivity()">{{open ? 'See Less Activity' : 'See More Activity'}} <i class="fa {{open ? 'fa-chevron-up' : 'fa-chevron-down'}}" aria-hidden="true"></i></a>
+            <a href="{{assignmentLink}}" *ngIf="activities && activities.length > 1" class="ocl-student-card__activity-full">Full History</a>
         </div>
     </div>
 </div>
