@@ -13,5 +13,8 @@ import {
 	encapsulation: ViewEncapsulation.None
 })
 export class OclAssignmentItem {
-	@Input() assignmentItem: any;
+	@Input() progress: number;
+	@Input() title: string;
+	@Input() titleLink: string;
+	@Input() detail: string;
 };

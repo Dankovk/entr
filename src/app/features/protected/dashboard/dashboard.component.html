@@ -29,9 +29,15 @@
 						<ocl-assignment-card></ocl-assignment-card>
 					</ocl-tab>
 					<ocl-tab tabTitle="Your activity">
-						<ocl-watch-event
-								[watchEvents]="watchEvent.allEvents"
-						></ocl-watch-event>
+						<div ocl-watch-event *ngFor="let watchEvent of [{image: 'http://placehold.it/188x106', imageText: 'alt Image Text', title: 'watchevent', titleLink: 'http://placehold.it/188x106', subTitle: 'watch event subTitle', subTitleLink: 'http://placehold.it/188x106', detail: 'some Watch Event detail'}, {image: 'http://placehold.it/188x106', imageText: 'alt Image Text', title: 'watchevent2', titleLink: 'http://placehold.it/188x106', subTitle: 'watch event subTitle', subTitleLink: 'http://placehold.it/188x106', detail: 'some Watch Event detail'}];  let i = index;"
+								[image]="watchEvent.image"
+								[imageText]="watchEvent.imageText"
+								[title]="watchEvent.title"
+								[titleLink]="watchEvent.titleLink"
+								[subTitle]="watchEvent.subTitle"
+								[subTitleLink]="watchEvent.subTitleLink"
+								[detail]="watchEvent.detail">
+						</div>
 					</ocl-tab>
 				</ocl-tabs>
 			</div>

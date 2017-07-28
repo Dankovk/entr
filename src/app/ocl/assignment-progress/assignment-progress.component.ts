@@ -13,5 +13,5 @@ import {
 	encapsulation: ViewEncapsulation.None
 })
 export class OclAssignmentProgress {
-	// @Input() assignmentProgress: any;
+	@Input() progress: number;
 };

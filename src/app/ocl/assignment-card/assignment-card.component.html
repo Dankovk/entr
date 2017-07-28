@@ -7,8 +7,9 @@
 	<div class="ocl-card__body ocl-assignment-card__body">
 		<h2 class="ocl-assignment-card__title">Assignment Title</h2>
 		<ul class="ocl-assignment-card__list">
-			<ocl-assignment-item></ocl-assignment-item>
-			<ocl-assignment-item></ocl-assignment-item>
+			<ocl-assignment-item *ngFor="let assignmentItem of [{title:'Anatomy and Piano Playing', detail:'3 Videos (4:46)'},{title:'Anatomy and Piano Playing 2', detail:'3 Videos (4:46)'}]"
+			[title]="assignmentItem.title"
+			[detail]="assignmentItem.detail"></ocl-assignment-item>
 		</ul>
 	</div>
 	<div class="ocl-card__footer ocl-assignment-card__footer">
