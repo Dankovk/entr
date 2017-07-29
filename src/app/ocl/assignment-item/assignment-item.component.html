@@ -1,5 +1,10 @@
 <li class="ocl-assignment-card__list-item">
 	<ocl-assignment-progress></ocl-assignment-progress>
-	<h3 class="ocl-assignment-card__list-item-title">{{title}}</h3>
+
+	<a *ngIf="titleLink; else nonLink" href="{{titleLink}}" class="ocl-assignment-card__list-item-title">{{title}}</a>
+	<ng-template #nonLink>
+		<h3 *ngIf="title" class="ocl-assignment-card__list-item-title">{{title}}</h3>
+	</ng-template>
+
 	<div *ngIf="detail" class="ocl-assignment-card__list-item-details">{{detail}}</div>
 </li>

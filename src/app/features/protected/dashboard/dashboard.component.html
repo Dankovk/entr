@@ -26,7 +26,21 @@
 							[date]="'02/01/17'"
 							[activities]="[{item: 'Anatomy of Piano playing', descr: '8 of 10 correct', icon: 'fa-question-circle', title: 'Quiz attempt'}, {item: 'Anatomy of Piano playing second', descr: '8 of 10 correct', icon: 'fa-question-circle', title: 'Quiz attempt'}]">
 						</div>
-						<ocl-assignment-card></ocl-assignment-card>
+						<ocl-assignment-card  *ngFor="let assignmentCard of [{title:'Assignment Title', assigned:'11/22/17', due:'11/22/17', completed:'Not Complete', assignmentItems: [{title:'Anatomy and Piano Playing', titleLink: 'http://placehold.it/188x106', detail:'3 Videos (4:46)'},{title:'Anatomy and Piano Playing 2', detail:'3 Videos (4:46)'}] }]"
+										[title]="assignmentCard.title"
+										[assigned]="assignmentCard.assigned"
+										[due]="assignmentCard.due"
+										[completed]="assignmentCard.completed"
+										[assignmentItems]="assignmentCard.assignmentItems"
+						></ocl-assignment-card>
+
+						<ocl-student-assignment-card *ngFor="let studentAssignmentCard of [{title:'Assignment Title', assigned:'11/22/17', due:'11/22/17', assignmentItems: [{title:'Anatomy and Piano Playing', detail:'3 Videos (4:46)'},{title:'Anatomy and Piano Playing 2', detail:'3 Videos (4:46)'}], notes: 'Mime the up-down movement of the wrist, as you allow your fingers to stay at rest while your upper arm moves slightly forward and backward.  This is an extension of the basic, natural hand position found when you draw your hand up from your side.' }]"
+										[title]="studentAssignmentCard.title"
+										[assigned]="studentAssignmentCard.assigned"
+										[due]="studentAssignmentCard.due"
+										[assignmentItems]="studentAssignmentCard.assignmentItems"
+										[notes]="studentAssignmentCard.notes"
+						></ocl-student-assignment-card>
 					</ocl-tab>
 					<ocl-tab tabTitle="Your activity">
 						<div ocl-watch-event *ngFor="let watchEvent of [{image: 'http://placehold.it/188x106', imageText: 'alt Image Text', title: 'watchevent', titleLink: 'http://placehold.it/188x106', subTitle: 'watch event subTitle', subTitleLink: 'http://placehold.it/188x106', detail: 'some Watch Event detail'}, {image: 'http://placehold.it/188x106', imageText: 'alt Image Text', title: 'watchevent2', titleLink: 'http://placehold.it/188x106', subTitle: 'watch event subTitle', subTitleLink: 'http://placehold.it/188x106', detail: 'some Watch Event detail'}];  let i = index;"

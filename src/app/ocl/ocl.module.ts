@@ -8,6 +8,7 @@ import { OclWatchEventModule } from "./watch-event/watch-event.module";
 import { OclAssignmentProgressModule } from "./assignment-progress/assignment-progress.module";
 import { OclAssignmentItemModule } from "./assignment-item/assignment-item.module";
 import { OclAssignmentCardModule } from "./assignment-card/assignment-card.module";
+import { OclStudentAssignmentCardModule } from "./student-assignment-card/student-assignment-card.module";
 import { OclTabsModule } from "./tabs/index";
 import { OclMainNavModule } from "./main-nav/main-nav.module";
 import { OclStudentCardModule } from "./student-card/student-card.module";
@@ -26,6 +27,7 @@ import { OclAssignmentActivityModule } from "./assignment-activity/assignment-ac
 		OclAssignmentProgressModule,
 		OclAssignmentItemModule,
 		OclAssignmentCardModule,
+		OclStudentAssignmentCardModule,
 		OclTabsModule,
 		OclMainNavModule,
 		OclStudentCardModule,
@@ -44,6 +46,7 @@ import { OclAssignmentActivityModule } from "./assignment-activity/assignment-ac
 		OclAssignmentProgressModule,
 		OclAssignmentItemModule,
 		OclAssignmentCardModule,
+		OclStudentAssignmentCardModule,
 		OclTabsModule,
 		OclMainNavModule,
 		OclStudentCardModule,

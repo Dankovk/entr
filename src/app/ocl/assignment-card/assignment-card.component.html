@@ -1,15 +1,16 @@
 <div class="ocl-card ocl-card--full-width-header ocl-assignment-card">
 	<div class="ocl-card__header ocl-assignment-card__header">
-		<div class="ocl-assignment-card__date ocl-assignment-card__date--assigned">Assigned: 11/22/17</div>
-		<div class="ocl-assignment-card__date ocl-assignment-card__date--due">Due: 11/22/17</div>
-		<div class="ocl-assignment-card__date ocl-assignment-card__date--completed">Not Complete</div>
+		<div class="ocl-assignment-card__date ocl-assignment-card__date--assigned">Assigned: {{assigned ? assigned : 'Not Assigned'}}</div>
+		<div *ngIf="due" class="ocl-assignment-card__date ocl-assignment-card__date--due">Due: {{due}}</div>
+		<div *ngIf="completed" class="ocl-assignment-card__date ocl-assignment-card__date--completed">{{completed}}</div>
 	</div>
 	<div class="ocl-card__body ocl-assignment-card__body">
-		<h2 class="ocl-assignment-card__title">Assignment Title</h2>
-		<ul class="ocl-assignment-card__list">
-			<ocl-assignment-item *ngFor="let assignmentItem of [{title:'Anatomy and Piano Playing', detail:'3 Videos (4:46)'},{title:'Anatomy and Piano Playing 2', detail:'3 Videos (4:46)'}]"
-			[title]="assignmentItem.title"
-			[detail]="assignmentItem.detail"></ocl-assignment-item>
+		<h2 *ngIf="title" class="ocl-assignment-card__title">{{title}}</h2>
+		<ul *ngIf="assignmentItems" class="ocl-assignment-card__list">
+			<ocl-assignment-item *ngFor="let assignmentItem of assignmentItems"
+			                     [title]="assignmentItem.title"
+			                     [titleLink]="assignmentItem.titleLink"
+			                     [detail]="assignmentItem.detail"></ocl-assignment-item>
 		</ul>
 	</div>
 	<div class="ocl-card__footer ocl-assignment-card__footer">

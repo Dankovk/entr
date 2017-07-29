@@ -6,16 +6,16 @@ import {
 } from "@angular/core";
 
 @Component({
-	selector: 'ocl-assignment-card',
-	templateUrl: './assignment-card.component.html',
-	styleUrls: ['./assignment-card.component.css'],
+	selector: 'ocl-student-assignment-card',
+	templateUrl: './student-assignment-card.component.html',
+	styleUrls: ['./student-assignment-card.component.css'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	encapsulation: ViewEncapsulation.None
 })
-export class OclAssignmentCard {
+export class OclStudentAssignmentCard {
 	@Input() title: string;
 	@Input() assigned: string;
 	@Input() due: string;
-	@Input() completed: string;
 	@Input() assignmentItems: any;
+	@Input() notes: string;
 };
