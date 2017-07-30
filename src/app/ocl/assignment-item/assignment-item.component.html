@@ -3,7 +3,7 @@
 
 	<a *ngIf="titleLink; else nonLink" href="{{titleLink}}" class="ocl-assignment-card__list-item-title">{{title}}</a>
 	<ng-template #nonLink>
-		<h3 *ngIf="title" class="ocl-assignment-card__list-item-title">{{title}}</h3>
+		<h2 *ngIf="title" class="ocl-assignment-card__list-item-title">{{title}}</h2>
 	</ng-template>
 
 	<div *ngIf="detail" class="ocl-assignment-card__list-item-details">{{detail}}</div>

@@ -22,7 +22,7 @@ describe('Ocl Watch Event component', () => {
 		expect(assignmentActivityDebugElement.nativeElement !== 'undefined');
 	});
 
-	it('renders with image, title, subTitle, detail', () => {
+	it('renders complete', () => {
 		let fixture = TestBed.createComponent(TestApp);
 		fixture.detectChanges();
 
@@ -44,14 +44,15 @@ describe('Ocl Watch Event component', () => {
 	selector: 'test-app',
 	template: `
 	<div ocl-student-card id="empty"></div>
-	<div ocl-watch-event *ngFor="let watchEvent of [{image: 'http://placehold.it/188x106', imageText: 'alt Image Text', title: 'watchevent', titleLink: 'http://placehold.it/188x106', subTitle: 'watch event subTitle', subTitleLink: 'http://placehold.it/188x106', detail: 'some Watch Event detail'}, {image: 'http://placehold.it/188x106', imageText: 'alt Image Text', title: 'watchevent2', titleLink: 'http://placehold.it/188x106', subTitle: 'watch event subTitle', subTitleLink: 'http://placehold.it/188x106', detail: 'some Watch Event detail'}];  let i = index;"
-								[image]="watchEvent.image"
-								[imageText]="watchEvent.imageText"
-								[title]="watchEvent.title"
-								[titleLink]="watchEvent.titleLink"
-								[subTitle]="watchEvent.subTitle"
-								[subTitleLink]="watchEvent.subTitleLink"
-								[detail]="watchEvent.detail" id="image_title_subtitle_details">
+	<div ocl-watch-event 
+								[image]="'image'"
+								[imageText]="'imageText'"
+								[title]="'title'"
+								[titleLink]="'titleLink'"
+								[subTitle]="'subTitle'"
+								[subTitleLink]="'subTitleLink'"
+								[detail]="'detail'" 
+								id="complete">
 						</div>`
 })
 class TestApp implements AfterContentInit{
