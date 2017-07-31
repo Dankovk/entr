@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AccountPageComponent } from './account-page.component';
+import { RepertoireModuleComponent } from './repertoire-module.component';
 
 const skillLibraryRoutes: Routes = [{
 	path: '',
-	component: AccountPageComponent
+	component: RepertoireModuleComponent
 }];
 
 @NgModule({
@@ -16,4 +16,4 @@ const skillLibraryRoutes: Routes = [{
 		RouterModule
 	]
 })
-export class AccountPageRoutingModule { }
+export class RepertoireModuleRoutingModule { }

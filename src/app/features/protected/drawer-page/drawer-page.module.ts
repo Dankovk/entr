@@ -2,10 +2,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-import { AccountPageComponent } from './account-page.component';
+import { DrawerPageComponent } from './drawer-page.component';
 
-import { AccountPageRoutingModule } from './account-page-routing.module';
-import { AccountPageService } from './account-page.service';
+import { DrawerPageRoutingModule } from './drawer-page-routing.module';
 import {OclModule} from "../../../ocl/ocl.module";
 
 
@@ -13,15 +12,14 @@ import {OclModule} from "../../../ocl/ocl.module";
 	imports: [
 		CommonModule,
 		FormsModule,
-		AccountPageRoutingModule,
+		DrawerPageRoutingModule,
 		OclModule
 	],
 	declarations: [
-		AccountPageComponent,
+		DrawerPageComponent,
 	],
-	providers: [AccountPageService]
 })
 
-export class AccountPageModule {
+export class DrawerPageModule {
 	// static reducer = () => skillLibraryReducer;
 }

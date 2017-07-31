@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-import { QuizPageComponent } from './quiz-page.component';
+import { QuizComponent } from './quiz.component';
 
-import { QuizPageRoutingModule } from './quiz-page-routing.module';
-import { QuizPageService } from './quiz-page.service';
+import { QuizRoutingModule } from './quiz-routing.module';
+import { QuizService } from './quiz.service';
 import {OclModule} from "../../../ocl/ocl.module";
 
 
@@ -13,15 +13,15 @@ import {OclModule} from "../../../ocl/ocl.module";
 	imports: [
 		CommonModule,
 		FormsModule,
-		QuizPageRoutingModule,
+		QuizRoutingModule,
 		OclModule
 	],
 	declarations: [
-		QuizPageComponent,
+		QuizComponent,
 	],
-	providers: [QuizPageService]
+	providers: [QuizService]
 })
 
-export class QuizPageModule {
+export class QuizModule {
 	// static reducer = () => skillLibraryReducer;
 }

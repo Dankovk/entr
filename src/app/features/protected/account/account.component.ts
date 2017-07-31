@@ -1,21 +1,21 @@
 import {Component, OnDestroy, OnInit} from "@angular/core";
 import {Subject} from "rxjs/Subject";
-import {AccountPageService} from "./account-page.service";
+import {AccountService} from "./account.service";
 import gql from "graphql-tag";
 
 
 
 @Component({
 	selector: 'entrada-account-page',
-	templateUrl: './account-page.component.html',
-	styleUrls: ['./account-page.component.css']
+	templateUrl: './account.component.html',
+	styleUrls: ['./account.component.css']
 })
 
-export class AccountPageComponent implements OnDestroy, OnInit {
+export class AccountComponent implements OnDestroy, OnInit {
 	destroyed$: Subject<any> = new Subject<any>();
 	user: any = '';
 
-	constructor(private service: AccountPageService) {
+	constructor(private service: AccountService) {
 	}
 
 	ngOnInit() {

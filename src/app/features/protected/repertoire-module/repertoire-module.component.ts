@@ -1,21 +1,21 @@
 import {Component, OnDestroy, OnInit} from "@angular/core";
 import {Subject} from "rxjs/Subject";
-import {RepertoirePageService} from "./repertoire-page.service";
+import {RepertoireModuleService} from "./repertoire-module.service";
 import gql from "graphql-tag";
 
 
 
 @Component({
 	selector: 'entrada-repertoire-page',
-	templateUrl: './repertoire-page.component.html',
-	styleUrls: ['./repertoire-page.component.css']
+	templateUrl: './repertoire-module.component.html',
+	styleUrls: ['./repertoire-module.component.css']
 })
 
-export class RepertoirePageComponent implements OnDestroy, OnInit {
+export class RepertoireModuleComponent implements OnDestroy, OnInit {
 	destroyed$: Subject<any> = new Subject<any>();
 	user: any = '';
 
-	constructor(private service: RepertoirePageService) {
+	constructor(private service: RepertoireModuleService) {
 	}
 
 	ngOnInit() {

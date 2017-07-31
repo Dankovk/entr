@@ -16,39 +16,49 @@ describe('Ocl Assignment Activity component', () => {
 
 	it('renders empty', () => {
 		let fixture = TestBed.createComponent(TestApp);
+		fixture.detectChanges();
+
 		let assignmentActivityDebugElement = fixture.debugElement.query(By.css('#empty'));
-		expect(assignmentActivityDebugElement.nativeElement !== 'undefined');
+		expect(assignmentActivityDebugElement.nativeElement).toBeDefined();
 	});
 	it('renders with title', () => {
 		let fixture = TestBed.createComponent(TestApp);
+		fixture.detectChanges();
+
 		let assignmentActivityDebugElement = fixture.debugElement.query(By.css('#withTitle'));
 		const title = assignmentActivityDebugElement.nativeElement.querySelector('h4');
-		expect(title.textContent === 'title');
+		expect(title.textContent.trim()).toBe('title');
 	});
 
 	it('renders with button', () => {
 		let fixture = TestBed.createComponent(TestApp);
+		fixture.detectChanges();
+
 		let assignmentActivityDebugElement = fixture.debugElement.query(By.css('#withShowMore'));
 		const button = assignmentActivityDebugElement.nativeElement.querySelector('button');
-		expect(button !== 'undefined');
+		expect(button).toBeDefined();
 	});
 
 	it('renders with icon', () => {
 		let fixture = TestBed.createComponent(TestApp);
+		fixture.detectChanges();
+
 		let assignmentActivityDebugElement = fixture.debugElement.query(By.css('#withIcon'));
 		const icon = assignmentActivityDebugElement.nativeElement.querySelector('i');
-		expect(icon.classList.contains('test') === true);
+		expect(icon.classList.contains('test')).toBe(true);
 	});
 
 	it('renders complete', () => {
 		let fixture = TestBed.createComponent(TestApp);
+		fixture.detectChanges();
+
 		let assignmentActivityDebugElement = fixture.debugElement.query(By.css('#withIcon'));
 		const button = assignmentActivityDebugElement.nativeElement.querySelector('button');
 		const icon = assignmentActivityDebugElement.nativeElement.querySelector('i');
 		const title = assignmentActivityDebugElement.nativeElement.querySelector('h4');
-		expect(icon.classList.contains('test') === true);
-		expect(button !== 'undefined');
-		expect(title.textContent === 'title');
+		expect(icon.classList.contains('test')).toBe(true);
+		expect(button).toBeDefined();
+		expect(title.textContent.trim()).toBe('title');
 	});
 });
 

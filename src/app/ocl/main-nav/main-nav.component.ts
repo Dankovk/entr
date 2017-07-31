@@ -1,7 +1,7 @@
 import {Component, ChangeDetectionStrategy, ViewEncapsulation, Input} from "@angular/core";
 
 @Component({
-	selector: '[ocl-main-nav]',
+	selector: 'ocl-main-nav, div[ocl-main-nav]',
 	templateUrl: './main-nav.component.html',
 	styleUrls: ['./main-nav.component.css'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
@@ -10,4 +10,9 @@ import {Component, ChangeDetectionStrategy, ViewEncapsulation, Input} from "@ang
 
 export class OclMainNav {
 	@Input() name;
+	@Input() toggleDrawer;
+
+	drawerToggle() {
+		this.toggleDrawer();
+	}
 };

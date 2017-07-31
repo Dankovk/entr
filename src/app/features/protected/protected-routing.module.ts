@@ -5,10 +5,11 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { StudentLinkModule } from './student-link/student-link.module';
 import { SkillLibraryModule } from './skill-library/skill-library.module';
 import { RepertoireLibraryModule } from './repertoire-library/repertoire-library.module';
-import { RepertoirePageModule } from './repertoire-page/repertoire-page.module';
-import { QuizPageModule } from './quiz-page/quiz-page.module';
+import {RepertoireModuleModule} from './repertoire-module/repertoire-module.module';
+import { QuizModule } from './quiz/quiz.module';
 import { StudentAssignmentDetailModule } from './student-assignment/student-assignment.module';
-import { AccountPageModule } from './account-page/account-page.module';
+import { AccountModule } from './account/account.module';
+import { DrawerPageModule } from './drawer-page/drawer-page.module';
 
 
 const protectedRoutes: Routes = [
@@ -17,9 +18,10 @@ const protectedRoutes: Routes = [
 	{path: 'student-link', loadChildren: () => StudentLinkModule},
 	{path: 'student-assignment', loadChildren: () => StudentAssignmentDetailModule},
 	{path: 'repertoire-library', loadChildren: () => RepertoireLibraryModule},
-	{path: 'repertoire-page', loadChildren: () => RepertoirePageModule},
-	{path: 'quiz-page', loadChildren: () => QuizPageModule},
-	{path: 'account-page', loadChildren: () => AccountPageModule}
+	{path: 'repertoire-module', loadChildren: () => RepertoireModuleModule},
+	{path: 'quiz', loadChildren: () => QuizModule},
+	{path: 'account', loadChildren: () => AccountModule},
+	{path: 'drawer-page', loadChildren: () => DrawerPageModule}
 ];
 
 @NgModule({

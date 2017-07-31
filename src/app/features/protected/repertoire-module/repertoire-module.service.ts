@@ -22,7 +22,7 @@ const CurrentUserForProfile = gql`
 
 
 @Injectable()
-export class RepertoirePageService {
+export class RepertoireModuleService {
 	constructor(private apollo: Apollo) {}
 
 	loadUser() {

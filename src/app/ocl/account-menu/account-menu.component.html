@@ -1,0 +1,22 @@
+<div class="ocl-account-menu {{tooltipVisible ? 'ocl-account-menu--open' : ''}}">
+	<a href="#" class="ocl-account-menu__toggle" (click)="toggleTooltip()">
+		<div class="ocl-account-menu__username">
+			<span class="ocl-account-menu__username-type">{{name}}</span><i
+			class="fa fa-user-circle-o ocl-account-menu-icon" aria-hidden="true"></i>
+		</div>
+	</a>
+	<div class="ocl-popover">
+		<div class="ocl-popover__list">
+			<a class="ocl-popover__link" href="#">
+				<span>My account</span>
+			</a>
+			<a class="ocl-popover__link" href="#">
+				<span>Sign out</span>
+			</a>
+		</div>
+		<button class="ocl-popover__close" (click)="toggleTooltip()">
+			<div class="ocl-popover__close-element"></div>
+		</button>
+		<div class="ocl-popover__arrow ocl-popover__arrow--top-right"></div>
+	</div>
+</div>

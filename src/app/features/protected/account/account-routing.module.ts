@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { QuizPageComponent } from './quiz-page.component';
+import { AccountComponent } from './account.component';
 
 const skillLibraryRoutes: Routes = [{
 	path: '',
-	component: QuizPageComponent
+	component: AccountComponent
 }];
 
 @NgModule({
@@ -16,4 +16,4 @@ const skillLibraryRoutes: Routes = [{
 		RouterModule
 	]
 })
-export class QuizPageRoutingModule { }
+export class AccountRoutingModule { }

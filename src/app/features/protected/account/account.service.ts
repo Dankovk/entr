@@ -22,7 +22,7 @@ const CurrentUserForProfile = gql`
 
 
 @Injectable()
-export class QuizPageService {
+export class AccountService {
 	constructor(private apollo: Apollo) {}
 
 	loadUser() {

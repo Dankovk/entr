@@ -1,21 +1,21 @@
 import {Component, OnDestroy, OnInit} from "@angular/core";
 import {Subject} from "rxjs/Subject";
-import {QuizPageService} from "./quiz-page.service";
+import {QuizService} from "./quiz.service";
 import gql from "graphql-tag";
 
 
 
 @Component({
 	selector: 'entrada-quiz-page',
-	templateUrl: './quiz-page.component.html',
-	styleUrls: ['./quiz-page.component.css']
+	templateUrl: './quiz.component.html',
+	styleUrls: ['./quiz.component.css']
 })
 
-export class QuizPageComponent implements OnDestroy, OnInit {
+export class QuizComponent implements OnDestroy, OnInit {
 	destroyed$: Subject<any> = new Subject<any>();
 	user: any = '';
 
-	constructor(private service: QuizPageService) {
+	constructor(private service: QuizService) {
 	}
 
 	ngOnInit() {

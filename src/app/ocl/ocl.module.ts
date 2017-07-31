@@ -15,6 +15,8 @@ import { OclStudentCardModule } from "./student-card/student-card.module";
 import { OclRepertoireCardModule } from "./repertoire-card/repertoire-card.module";
 import { OclQuizCardModule } from "./quiz-card/quiz-card.module";
 import { OclAssignmentActivityModule } from "./assignment-activity/assignment-activity.module";
+import { OclDrawerNavModule } from "./drawer-nav/drawer-nav.module";
+import { OclAccountMenuModule } from "./account-menu/account-menu.module";
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { OclAssignmentActivityModule } from "./assignment-activity/assignment-ac
 		OclStudentCardModule,
 		OclRepertoireCardModule,
 		OclQuizCardModule,
-		OclAssignmentActivityModule
+		OclAssignmentActivityModule,
+		OclDrawerNavModule,
+		OclAccountMenuModule
 	],
 	// declarations: [ AwesomePipe, HighlightDirective ],
 	exports: [/* AwesomePipe, HighlightDirective, */
@@ -52,7 +56,9 @@ import { OclAssignmentActivityModule } from "./assignment-activity/assignment-ac
 		OclStudentCardModule,
 		OclRepertoireCardModule,
 		OclQuizCardModule,
-		OclAssignmentActivityModule
+		OclAssignmentActivityModule,
+		OclDrawerNavModule,
+		OclAccountMenuModule
 	]
 })
 export class OclModule {}

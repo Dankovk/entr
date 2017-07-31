@@ -61,7 +61,7 @@ describe('Ocl Student Card component', () => {
 	`
 })
 class TestApp implements AfterContentInit{
-	@ContentChild("withDescription") description: ElementRef;
+	@ContentChild("withDescription") description: ElementRef;тз
 	ngAfterContentInit() {
 		console.log(this.description);
 	}
