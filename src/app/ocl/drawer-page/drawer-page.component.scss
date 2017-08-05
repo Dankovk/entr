@@ -1,0 +1,28 @@
+@import "@one/drawer-page/drawer-page";
+.ocl-content-wrap {
+	background: #fff;
+}
+
+.ocl-drawer-page {
+	.ocl-drawer-nav {
+		position: absolute;
+		overflow-y: scroll;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 0;
+	}
+
+	.ocl-content-wrap {
+		position: relative;
+		z-index: 1;
+		transition: transform .2s ease-in;
+	}
+
+	&--open {
+		overflow: hidden;
+		.ocl-content-wrap {
+			transform: translateX(364px);
+		}
+	}
+}

@@ -1,9 +1,9 @@
-<div class="ocl-drawer-page">
+<div class="ocl-drawer-page {{drawerNavVisible ? 'ocl-drawer-page--open' : ''}}">
 	<div ocl-drawer-nav></div>
 	<div class="ocl-content-wrap">
 		<div ocl-main-nav [toggleDrawer]="toggleDrawerNav()" [name]="'Barbara T'"></div>
 		<div class="ocl-grid-container">
-			<h1>content</h1>
+			<ng-content></ng-content>
 		</div>
 	</div>
 </div>

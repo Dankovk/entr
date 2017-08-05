@@ -1,15 +1,16 @@
-import {Component, OnDestroy, OnInit} from "@angular/core";
+import {Component, OnDestroy, OnInit, ViewEncapsulation} from "@angular/core";
 import {Subject} from "rxjs/Subject";
 
 
 
 @Component({
-	selector: 'entrada-drawer-page',
+	selector: 'ocl-drawer-page',
 	templateUrl: './drawer-page.component.html',
-	styleUrls: ['./drawer-page.component.css']
+	styleUrls: ['./drawer-page.component.css'],
+	encapsulation: ViewEncapsulation.None
 })
 
-export class DrawerPageComponent implements OnDestroy, OnInit {
+export class OclDrawerPageComponent implements OnDestroy, OnInit {
 	destroyed$: Subject<any> = new Subject<any>();
 	drawerNavVisible = false;
 
@@ -22,7 +23,6 @@ export class DrawerPageComponent implements OnDestroy, OnInit {
 			this.drawerNavVisible = !this.drawerNavVisible;
 		}
 	}
-
 	ngOnDestroy() {
 		this.destroyed$.next();
 	}

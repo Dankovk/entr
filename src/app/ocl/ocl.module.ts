@@ -17,6 +17,9 @@ import { OclQuizCardModule } from "./quiz-card/quiz-card.module";
 import { OclAssignmentActivityModule } from "./assignment-activity/assignment-activity.module";
 import { OclDrawerNavModule } from "./drawer-nav/drawer-nav.module";
 import { OclAccountMenuModule } from "./account-menu/account-menu.module";
+import { OclDrawerPageModule } from "./drawer-page/drawer-page.module";
+import { OclDatefieldModule } from './datefield/datefield.module';
+import { OclCheckboxModule } from './checkbox/checkbox.module'
 
 
 @NgModule({
@@ -37,7 +40,10 @@ import { OclAccountMenuModule } from "./account-menu/account-menu.module";
 		OclQuizCardModule,
 		OclAssignmentActivityModule,
 		OclDrawerNavModule,
-		OclAccountMenuModule
+		OclAccountMenuModule,
+		OclDrawerPageModule,
+		OclDatefieldModule,
+		OclCheckboxModule
 	],
 	// declarations: [ AwesomePipe, HighlightDirective ],
 	exports: [/* AwesomePipe, HighlightDirective, */
@@ -58,7 +64,10 @@ import { OclAccountMenuModule } from "./account-menu/account-menu.module";
 		OclQuizCardModule,
 		OclAssignmentActivityModule,
 		OclDrawerNavModule,
-		OclAccountMenuModule
+		OclAccountMenuModule,
+		OclDrawerPageModule,
+		OclDatefieldModule,
+		OclCheckboxModule
 	]
 })
 export class OclModule {}

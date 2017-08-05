@@ -124,6 +124,7 @@
     "ip": "~1.1.5",
     "methods": "1.1.2",
     "one": "git+ssh://git@bitbucket.org:entradapiano/one.git#develop",
+    "primeng": "^4.1.2",
     "redux": "^3.6.0",
     "redux-localstorage": "^0.4.1",
     "redux-logger": "^3.0.1",
