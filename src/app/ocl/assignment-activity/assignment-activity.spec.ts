@@ -52,7 +52,7 @@ describe('Ocl Assignment Activity component', () => {
 		let fixture = TestBed.createComponent(TestApp);
 		fixture.detectChanges();
 
-		let assignmentActivityDebugElement = fixture.debugElement.query(By.css('#withIcon'));
+		let assignmentActivityDebugElement = fixture.debugElement.query(By.css('#complete'));
 		const button = assignmentActivityDebugElement.nativeElement.querySelector('button');
 		const icon = assignmentActivityDebugElement.nativeElement.querySelector('i');
 		const title = assignmentActivityDebugElement.nativeElement.querySelector('h4');

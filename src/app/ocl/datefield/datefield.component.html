@@ -1,3 +1,4 @@
 <div class="ocl-datefield">
-	<p-calendar></p-calendar>
+	<span *ngIf="date">{{date}}</span>
+	<p-calendar [(ngModel)]="date"></p-calendar>
 </div>

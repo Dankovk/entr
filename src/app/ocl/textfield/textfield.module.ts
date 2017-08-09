@@ -1,6 +1,6 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
-import {OclLabelDirective, OclInputDirective, OclErrorDirective, OclTextfield} from "./textfield.component";
+import {OclInputDirective, OclErrorDirective, OclTextfield} from "./textfield.component";
 
 
 @NgModule({
@@ -8,13 +8,11 @@ import {OclLabelDirective, OclInputDirective, OclErrorDirective, OclTextfield} f
 		CommonModule,
 	],
 	exports: [
-		OclLabelDirective,
 		OclInputDirective,
 		OclErrorDirective,
 		OclTextfield
 	],
 	declarations: [
-		OclLabelDirective,
 		OclInputDirective,
 		OclErrorDirective,
 		OclTextfield

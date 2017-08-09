@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { OclButtonModule } from "./button/button.module";
-import { OclTextfieldModule } from "./textfield/index";
+import { OclTextfieldModule } from "./textfield/textfield.module";
 import { OclWebinarCardModule } from "./webinar-card/webinar-card.module";
 import { OclWatchEventModule } from "./watch-event/watch-event.module";
 import { OclAssignmentProgressModule } from "./assignment-progress/assignment-progress.module";
@@ -19,7 +19,8 @@ import { OclDrawerNavModule } from "./drawer-nav/drawer-nav.module";
 import { OclAccountMenuModule } from "./account-menu/account-menu.module";
 import { OclDrawerPageModule } from "./drawer-page/drawer-page.module";
 import { OclDatefieldModule } from './datefield/datefield.module';
-import { OclCheckboxModule } from './checkbox/checkbox.module'
+import { OclCheckboxModule } from './checkbox/checkbox.module';
+import { OclDropdownModule } from "./dropdown/dropdown.module";
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { OclCheckboxModule } from './checkbox/checkbox.module'
 		OclAccountMenuModule,
 		OclDrawerPageModule,
 		OclDatefieldModule,
-		OclCheckboxModule
+		OclCheckboxModule,
+		OclDropdownModule
 	],
 	// declarations: [ AwesomePipe, HighlightDirective ],
 	exports: [/* AwesomePipe, HighlightDirective, */
@@ -67,7 +69,8 @@ import { OclCheckboxModule } from './checkbox/checkbox.module'
 		OclAccountMenuModule,
 		OclDrawerPageModule,
 		OclDatefieldModule,
-		OclCheckboxModule
+		OclCheckboxModule,
+		OclDropdownModule
 	]
 })
 export class OclModule {}

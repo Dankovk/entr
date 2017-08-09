@@ -39,7 +39,7 @@ describe('Ocl Assignment Item component', () => {
 @Component({
 	selector: 'test-app',
 	template: `
-	<ocl-assignment-card id="empty"></ocl-assignment-card>
+	<ocl-assignment-item id="empty"></ocl-assignment-item>
 	<ocl-assignment-item 
 			                     [title]="'title'"
 			                     [detail]="'detail'"

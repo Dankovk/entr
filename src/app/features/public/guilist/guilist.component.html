@@ -1,118 +1,129 @@
 <div class="gui-list">
-    <div class="container">
-        <div class="gui-list__block">
-            <div class="row">
-                <div class="col s12">
-                    <div class="gui-list__element">
-                        <h3>Button</h3>
-                        <button ocl-button #button>
-                            <span class="ocl-button__label">Button</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="gui-list__controls">
-                    <button (click)="button.disable()">disable</button>
-                    <button (click)="button.enable()">enable</button>
-                    <button (click)="button.focus()">focus</button>
-                    <button (click)="button.showSpinner()">loading</button>
-                    <button (click)="button.hideSpinner()">not loading</button>
-                </div>
-            </div>
-        </div>
-        <div class="gui-list__block">
-            <div class="row">
-                <div class="col s12">
-                    <div class="gui-list__element">
-                        <h3>Large button</h3>
-                        <button ocl-button-large #buttonLarge>
-                            <img src="http://placehold.it/50x50" class="ocl-button__image--round" alt="">
-                            <span class="ocl-button__label">Skill Library</span>
-                            <div class="ocl-button--hex-right"></div>
-                        </button>
-                    </div>
-                    <div class="gui-list__controls">
-                        <button (click)="buttonLarge.disable()">disable</button>
-                        <button (click)="buttonLarge.enable()">enable</button>
-                        <button (click)="buttonLarge.focus()">focus</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                <div class="gui-list__block">
-                    <ocl-textfield #input>
-                        <label ocl-input-label>Default Label</label>
-                        <input ocl-input type="text" placeholder="Default input"/>
-                        <span ocl-input-error>Default Error</span>
-                    </ocl-textfield>
-                    <div class="gui-list__controls">
-                        <button (click)="input.focus()">focus</button>
-                        <button (click)="input.blur()">blur</button>
-                        <button (click)="input.disable()">disable</button>
-                        <button (click)="input.enable()">enable</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                <div class="gui-list__block">
-                    <div class="row">
-                        <div class="col l7 m7 s12">
-                            <ocl-webinar-card></ocl-webinar-card>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                <div class="gui-list__block">
-                    <div class="row">
-                        <div class="col l7 m7 s12">
-                            <div ocl-tabs>
-                                <div ocl-tab tabTitle="Tab 1"> Some content</div>
-                                <div ocl-tab tabTitle="Tab 2"> Some content another</div>
-                                <div ocl-tab tabTitle="Tab 3 disabled" [disabled]="true"> Some content another</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                <div class="gui-list__block">
-                    <div class="row">
-                        <div class="col l12 m12 s12">
-                           <ocl-main-nav></ocl-main-nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+	<div class="container">
+		<div class="gui-list__block">
 			<div class="row">
 				<div class="col s12">
-					<div class="gui-list__block">
-						<div class="row">
-							<div class="col l12 m12 s12">
-								<ocl-datefield></ocl-datefield>
+					<div class="gui-list__element">
+						<h3>Button</h3>
+						<button ocl-button #button>
+							<span class="ocl-button__label">Button</span>
+						</button>
+					</div>
+				</div>
+				<div class="gui-list__controls">
+					<button (click)="button.disable()">disable</button>
+					<button (click)="button.enable()">enable</button>
+					<button (click)="button.focus()">focus</button>
+					<button (click)="button.showSpinner()">loading</button>
+					<button (click)="button.hideSpinner()">not loading</button>
+				</div>
+			</div>
+		</div>
+		<div class="gui-list__block">
+			<div class="row">
+				<div class="col s12">
+					<div class="gui-list__element">
+						<h3>Large button</h3>
+						<button ocl-button-large #buttonLarge>
+							<img src="http://placehold.it/50x50" class="ocl-button__image--round" alt="">
+							<span class="ocl-button__label">Skill Library</span>
+							<div class="ocl-button--hex-right"></div>
+						</button>
+					</div>
+					<div class="gui-list__controls">
+						<button (click)="buttonLarge.disable()">disable</button>
+						<button (click)="buttonLarge.enable()">enable</button>
+						<button (click)="buttonLarge.focus()">focus</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<div class="gui-list__block">
+					<ocl-textfield #input>
+						<input ocl-input type="text" placeholder="Default input"/>
+						<span ocl-input-error>Default Error</span>
+					</ocl-textfield>
+					<div class="gui-list__controls">
+						<button (click)="input.focus()">focus</button>
+						<button (click)="input.blur()">blur</button>
+						<button (click)="input.disable()">disable</button>
+						<button (click)="input.enable()">enable</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<div class="gui-list__block">
+					<div class="row">
+						<div class="col l7 m7 s12">
+							<ocl-webinar-card></ocl-webinar-card>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<div class="gui-list__block">
+					<div class="row">
+						<div class="col l7 m7 s12">
+							<div ocl-tabs>
+								<div ocl-tab tabTitle="Tab 1"> Some content</div>
+								<div ocl-tab tabTitle="Tab 2"> Some content another</div>
+								<div ocl-tab tabTitle="Tab 3 disabled" [disabled]="true"> Some content another</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col s12">
-					<div class="gui-list__block">
-						<div class="row">
-							<div class="col l12 m12 s12">
-								<ocl-checkbox></ocl-checkbox>
-							</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<div class="gui-list__block">
+					<div class="row">
+						<div class="col l12 m12 s12">
+							<ocl-dropdown [withSearch]="true"
+														[elements]="[{label:'Select City', value:null}, {label:'Test', value: 1}, {label:'Second', value: 2}]"></ocl-dropdown>
 						</div>
 					</div>
 				</div>
 			</div>
-    </div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<div class="gui-list__block">
+					<div class="row">
+						<div class="col l12 m12 s12">
+							<ocl-main-nav></ocl-main-nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<div class="gui-list__block">
+					<div class="row">
+						<div class="col l12 m12 s12">
+							<ocl-datefield></ocl-datefield>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<div class="gui-list__block">
+					<div class="row">
+						<div class="col l12 m12 s12">
+							<ocl-checkbox></ocl-checkbox>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

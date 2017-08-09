@@ -9,4 +9,5 @@ import {Component, ChangeDetectionStrategy, ViewEncapsulation, Input} from "@ang
 })
 
 export class OclDatefieldComponent {
+	date: Date;
 };
